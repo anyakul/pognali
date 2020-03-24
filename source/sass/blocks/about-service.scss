@@ -1,0 +1,122 @@
+.about-service {
+  @include section-border-radius;
+  background-color: $bg-dark-blue-color;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  padding-top: 33px;
+  padding-bottom: 62px;
+  background-position: 60% 0;
+  position: relative;
+}
+
+.about-service__wrapper {
+  @include page-width;
+  width: 70%;
+}
+
+.about-service__header {
+  color: $dark-orange-color;
+  margin-bottom: 22px;
+  font-size: 21px;
+}
+
+.about-service__intro {
+  color: $white-color;
+  font-family: $bloggersans-light;
+  margin-bottom: 18px;
+  line-height: 22px;
+}
+
+.about-service__intro-invite {
+  color: $white-color;
+  line-height: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.about-service__button {
+  display: none;
+}
+
+@media (min-width: $min-tablet-width) {
+  .about-service {
+    background-image: url("../img/about-tablet@1x.png");
+    padding-top: 25px;
+    padding-bottom: 68px;
+    background-position: 107% 53px;
+    border-radius: 0 0 61px 61px;
+  }
+
+  .about-service__wrapper {
+    width: 80%;
+    padding: 20px;
+    background-size: 100% 50px;
+  }
+
+  .about-service__column {
+    width: 50%;
+  }
+
+  .about-service__header {
+    margin-bottom: 43px;
+    font-size: 38px;
+  }
+
+  .about-service__intro {
+    margin-bottom: 33px;
+    line-height: 33px;
+    font-size: 28px;
+  }
+
+  .about-service__intro-invite {
+    line-height: 25px;
+    margin-bottom: 53px;
+    font-size: 20px;
+  }
+
+  .about-service__button {
+    @include yellow-button;
+    padding: 27px 30px 30px 31px;
+    font-size: 22px;
+    width: 69%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-service {
+    background-image: url("../img/about-desktop@1x.png");
+    padding-bottom: 145px;
+    padding-top: 0;
+    background-position: 93% 0;
+  }
+
+  .about-service__wrapper {
+    padding-left: 0; 
+    padding-top: 0;
+    width: 81%;
+  }
+
+  .about-service__column {
+    width: 53%;
+  }
+
+  .about-service__header {
+    margin-bottom: 60px;
+    padding-top: 42px;
+  }
+
+  .about-service__intro {
+    margin-bottom: 40px;
+  }
+
+  .about-service__intro-invite {
+    margin-bottom: 85px;
+    font-size: 19px;
+    width: 70%;
+  }
+
+  .about-service__button {
+    width: 33%;
+  }
+}

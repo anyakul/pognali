@@ -1,0 +1,375 @@
+.register {
+  background-color: $yellow-color;
+}
+
+.register__big-wrapper {
+  background-color: $dark-blue-color;
+  padding-top: 68px;
+  padding-bottom: 15px;
+  border-radius: 0 0 27px 27px;
+}
+
+.register__wrapper {
+  @include page-width;
+  text-align: center;
+}
+
+.register__header {
+  color: $orange-color;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+.register__intro {
+  color: $white-color;
+  margin-bottom: 20px;
+  width: 62%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.register__intro br {
+  display: none;
+}
+
+.register__link {
+  color: $yellow-color;
+  text-decoration: underline;
+}
+
+.register__form {
+  @include flex-row;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-left: 11px;
+}
+
+.register__form input {
+  padding: 22px 10px 23px 25px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+.register__form button {
+  @include yellow-button;
+  padding: 0;
+  width: 61px;
+  height: 61px;
+  margin-left: -35px;
+  border-radius: 10px;
+}
+
+.register__form svg {
+  padding: 30% 39%;
+}
+
+.register__contacts-item-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+.register__button-text {
+  display: none;
+}
+
+.register__contacts {
+  color: $white-color;
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.register__contacts-list {
+  text-align: left;
+  margin-left: 15px;
+  @include cancel-list;
+}
+
+.register__contacts-item {
+  margin-bottom: 24px;
+}
+
+.register__contacts-item a {
+  color: $yellow-color;
+}
+
+.register__contacts-item-icon {
+  margin-bottom: 20px;
+  margin-right: 16px;
+  padding: 12px 9px;
+  background-color: $black-color;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.register__contacts-item-icon svg {
+  color: $yellow-color;
+}
+
+.register__contacts-item-text--mail {
+  font-size: 18px;
+}
+
+@media (min-width: $min-tablet-width) {
+  .register {
+    background-color: $yellow-color;
+  }
+
+
+  .register__big-wrapper {
+    background-color: $dark-blue-color;
+    padding-top: 70px;
+    padding-bottom: 55px;
+    border-radius: 0 0 59px 59px;
+  }
+
+  .register__wrapper {
+    @include page-width;
+    text-align: center;
+  }
+
+  .register__header {
+    color: $orange-color;
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+
+  .register__intro {
+    color: $white-color;
+    margin-bottom: 20px;
+    width: 89%;
+    margin: 0 auto;
+    margin-bottom: 65px;
+    font-size: 25px;
+    line-height: 33px;
+  }
+
+  .register__intro br {
+    display: block;
+  }
+
+  .register__form {
+    @include flex-row;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    width: 88%;
+  }
+
+  .register__form input {
+    padding: 26px 10px 26px 34px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    width: 83%;
+    margin: 0;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .register__form button {
+    @include yellow-button;
+    padding: 26px;
+    width: 13%;
+    height: 81px;
+    margin-left: -18px;
+    border-radius: 0 16px 16px 0;
+    padding-left: 35px;
+  }
+
+  .register__form svg {
+    padding: 0;
+  }
+
+  .register__contacts {
+    color: $white-color;
+    margin-bottom: 67px;
+    font-size: 25px;
+  }
+  
+  .register__contacts br {
+    display: none;
+  }
+
+  .register__contacts-list {
+    text-align: left;
+    margin-left: 0;
+    @include flex-column;
+    width: 89%;
+    margin: 0 auto;
+  }
+  
+  .register__contacts-item-icon svg {
+    width: 34px;
+  }
+.register__contacts-item-text {
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+  
+  .register__contacts-item-text--mail {
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+    .register__contacts-item {
+      margin-bottom: 34px;
+      margin-right: 20px;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+    .register__contacts-item {
+      margin-bottom: 32px;
+    }
+    
+    .register__contacts-item a {
+      color: $yellow-color;
+    }
+
+    .register__contacts-item-icon {
+      margin-bottom: 20px;
+      margin-right: 24px;
+      padding: 23px 17px;
+      background-color: $black-color;
+      border-radius: 50%;
+    }
+    
+    .register__button-text {
+    display: none;
+  }
+
+    .register__contacts-item-icon svg {
+      color: $yellow-color;
+    }
+  
+
+
+}
+
+
+@media (min-width: $desktop-width) {
+  .register {
+    background-color: $yellow-color;
+  }
+
+
+  .register__big-wrapper {
+    background-color: $dark-blue-color;
+    padding-top: 102px;
+    padding-bottom: 100px;
+    border-radius: 0 0 59px 59px;
+  }
+
+  .register__wrapper {
+    @include page-width;
+    text-align: center;
+  }
+
+  .register__header {
+    color: $orange-color;
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+
+  .register__intro {
+    color: $white-color;
+    margin-bottom: 20px;
+    width: 89%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-size: 25px;
+    line-height: 33px;
+  }
+
+  .register__intro br {
+    display: block;
+  }
+
+  .register__form {
+    @include flex-row;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    width: 92%;
+  }
+
+  .register__form input {
+    padding: 26px 10px 26px 34px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    width: 83%;
+    margin: 0;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .register__form button {
+    @include yellow-button;
+    padding: 26px;;
+    width: 30%;
+    height: 81px;
+    margin-left: -35px;
+    border-radius: 10px;
+  }
+
+  .register__form svg {
+    padding: 0;
+  }
+
+  .register__contacts {
+    color: $white-color;
+    margin-bottom: 80px;
+    font-size: 32px;
+  }
+
+  .register__contacts-list {
+    text-align: left;
+    margin-left: 0;
+    @include cancel-list;
+    @include flex-row-space;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+.register__contacts-item-text {
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+    .register__contacts-item {
+      margin-bottom: 35px;
+      margin-right: 20px;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+    .register__contacts-item a {
+      color: $yellow-color;
+    }
+
+    .register__contacts-item-icon {
+      margin-bottom: 20px;
+      margin-right: 36px;
+      padding: 32px 24px;
+      background-color: $black-color;
+    }
+    
+    .register__button-text {
+  display: block;
+}
+
+    .register__contacts-item-icon svg {
+      color: $yellow-color;
+    }
+  
+
+
+}
+

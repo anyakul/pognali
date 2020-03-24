@@ -1,0 +1,127 @@
+.page-header {
+  padding-bottom: 40px;
+  background-color: $bg-dark-blue-color;
+}
+
+.page-header__wrapper {
+  @include page-width;
+  @include flex-row-space;
+  align-items: center;
+  width: 84%;
+  padding-top: 28px;
+}
+
+.page-header__toggle {
+  margin-top: 4px;
+}
+
+
+@media (min-width: $min-tablet-width) {
+  .page-header {
+    padding-bottom: 65px;
+    padding-top: 42px;
+    background-color: $bg-tablet-dark-blue-color;
+  }
+
+  .page-header__wrapper {
+    width: 89%;
+    padding-top: 0px;
+  }
+
+  .page-header__toggle {
+    @include button;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: $max-tablet-width) {
+  .page-header__main-nav--closed .page-header__menu,
+  .page-header__contacts {
+    display: none;
+  }
+
+  .page-header__logo-menu {
+    @include flex-row-space;
+    width: 50%;
+  }
+
+  .page-header__logo-image {
+    width: 164px;
+    height: 45px;
+  }
+
+  .page-header__toggle {
+    @include button;
+  }
+
+  .page-header__main-nav--opened {
+    @include page-width;
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    background-color: $white-color;
+  }
+
+  .page-header__main-nav--opened .page-header__toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 20px;
+    background-image: url("../img/close.svg");
+    background-repeat: no-repeat;
+  }
+
+  .page-header__main-nav--closed .page-header__toggle {
+    display: block;
+    background-image: url("../img/menu.svg");
+    width: 25px;
+    height: 20px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header__logo-menu {
+    width: 100%;
+  }
+  
+  .page-header__logo-image {
+    width: 100px;
+    height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding-bottom: 0;
+    padding-top: 0;
+    background-color: $bg-desktop-dark-blue-color;
+   }
+ 
+  .page-header__wrapper {
+    @include flex-row;
+    width: 94%;
+    padding-top: 43px;
+    align-items: center;
+  }
+
+  .page-header__logo-menu {
+    @include flex-row;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    margin-right: 40px;
+  }
+
+  .page-header__logo-image {
+    width: 200px;
+    height: 50px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}

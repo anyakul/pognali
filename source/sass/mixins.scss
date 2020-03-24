@@ -1,0 +1,257 @@
+@mixin page-width {
+  width: 91%;
+  max-width: 1317px;
+  margin: 0 auto;
+  
+  @media (min-width: $tablet-width) {
+    width: 89%;
+  }
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+@mixin flex-row-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin yellow-button {
+    background-color: $yellow-color;
+    align-items: center;
+    padding: 10px 20px;
+    color: $dark-blue-color;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $light-orange-color;
+    }
+
+    &:active {
+      color: $svg-active-color;
+    }
+  }
+
+@mixin section-border-radius {
+  border-radius: 0 0 30px 30px;
+  
+  @media (min-width: $tablet-width) {
+    border-radius: 0 0 60px 60px;
+  }
+}
+
+@mixin flex-row-space {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+@mixin flex-row-space-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin flex-row-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin cancel-list {
+  list-style: none;
+}
+
+@mixin button {
+  background-color: transparent;
+  border: none;
+}
+
+@mixin blue-color-button {
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+  line-height: 25px;
+  position: relative;
+  color: $blue-color;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $light-blue-color;
+  }
+
+  &:active {
+    color: $dark-blue-color;
+  }
+}
+
+@mixin yellow-button {
+  @include flex-row-space;
+  border: none;
+  align-items: center;
+  background-color: $yellow-color;
+  color: $dark-blue-color;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  
+  &:hover {
+    background-color: $dark-orange-color;
+  }
+
+  &:active,
+  &:focus,
+  &:active svg,
+  &:focus svg {
+    color: $brown-hover-color;
+  }
+}
+
+@mixin white-link {
+    color: $white-color;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $yellow-color;
+    }
+
+    &:active,
+    &:focus {
+      color: $brown-color;
+    }
+  }
+
+@mixin text {
+  font-size: 14px;
+  line-height: 17px;
+  color: $grey-color;
+}
+
+@mixin big-white-title {
+  font-family: $montserrat-bold;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  color: $white-color;
+
+  @media (max-width: $tablet-width) {
+    font-size: 37px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@mixin big-black-title {
+  font-size: 41px;
+  color: $black-color;
+  line-height: 48px;
+}
+
+@mixin section-header {
+  font-size: 18px;
+  line-height: 26px;
+  color: $black-color;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@mixin section-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: $black-color;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@mixin white-border-button {
+  font-family: $montserrat-bold;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 22px;
+  color: $white-color;
+  border: 1px solid $white-color;
+  padding: 21px 37px;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $light-grey-color;
+    border: 1px solid $light-grey-color;
+  }
+
+  &:active {
+    color: $dark-grey-color;
+    border: 1px solid $dark-grey-color;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    padding: 22px 41px;
+  }
+}
+
+@mixin select {
+  background-color: transparent;
+  border: 0 none;
+  appearance: none;
+  background-image: url("../img/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: 33px 5px;
+  width: 45px;
+  font-size: 15px;
+  line-height: 18px;
+  color: $black-color;
+  text-transform: uppercase;
+}
+
+
+@mixin stars-group {
+  @include flex-row;
+  @include cancel-list;
+  margin-left: 10px;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 0;
+  }
+}
+
+@mixin icon-star {
+  margin-right: 5px;
+}

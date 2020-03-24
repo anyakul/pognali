@@ -1,0 +1,150 @@
+.address {
+  background-color: $yellow-color;
+  @include section-border-radius;
+  position: relative;
+  z-index: 5;
+}
+
+.address__wrapper {
+  @include page-width;
+  width: 85%;
+  padding: 33px 0;
+}
+
+.address__text {
+  font-size: 16px;
+  line-height: 20px;
+  width: 72%;
+}
+
+.address__item {
+  @include flex-row;
+  align-items: center;
+  margin-bottom: 31px;
+}
+
+
+.address__item svg {
+  @include yellow-button;
+  width: 12px;
+  height: 22px;
+  margin-right: 17px;
+  color: $yellow-color;
+  background-color: $black-color;
+  border-radius: 50%;
+  padding: 12px 17px;
+}
+
+.address__button {
+  @include yellow-button;
+  border: 3px solid #1d2e5b;
+  color: #1d2e5b;
+  padding: 18px 21px;
+  border-radius: 10px;
+  font-size: 17px;
+  
+}
+
+@media (min-width: $min-tablet-width) {
+  .address {
+    background-color: $yellow-color;
+    border-radius: 0 0 60px 60px;
+    position: relative;
+    z-index: 5;
+    padding-top: 50px;
+    padding-bottom: 85px;
+  }
+
+  .address__wrapper {
+    align-items: center;
+    padding: 0;
+    width: 80%;
+  }
+
+  .address__text {
+    font-size: 28px;
+    width: 72%;
+  }
+
+  .address__item {
+    @include flex-row;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+
+
+  .address__item svg {
+    @include yellow-button;
+    width: 20px;
+    height: 25px;
+    margin-right: 20px;
+    color: $yellow-color;
+    background-color: $black-color;
+    border-radius: 50%;
+    padding: 19px 23px;
+  }
+
+  .address__button {
+    @include yellow-button;
+    border: 3px solid #1d2e5b;
+    color: #1d2e5b;
+    padding: 26px 31px;
+    border-radius: 10px;
+    font-size: 21px;
+    
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address {
+    padding-bottom: 55px;
+  }
+
+  .address__wrapper {
+    align-items: center;
+    padding: 0;
+    @include flex-row;
+    width: 80%;
+    padding-left: 18%;
+  }
+
+  .address__text {
+    font-size: 28px;
+    width: 82%;
+    line-height: 30px;
+  }
+
+  .address__item {
+    @include flex-row;
+    align-items: center;
+    margin-bottom: 0;
+    margin-right: 13%;
+  }
+
+
+  .address__item svg {
+    @include yellow-button;
+    width: 45px;
+    height: 53px;
+    margin-right: 20px;
+    color: $yellow-color;
+    background-color: $black-color;
+    border-radius: 50%;
+    padding: 19px 23px;
+    margin-left: 10px;
+  }
+
+  .address__button {
+    @include yellow-button;
+    border: 3px solid #1d2e5b;
+    color: #1d2e5b;
+    padding: 26px 38px;
+    border-radius: 28px;
+    font-size: 21px;
+    
+  }
+  
+  .address__button svg {
+    margin-left: 20px;
+  }
+}

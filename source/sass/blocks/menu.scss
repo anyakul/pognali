@@ -1,0 +1,119 @@
+@media (max-width: $tablet-width) {
+  .menu {
+    @include page-width;
+    @include flex-column;
+    padding-top: 30px;
+  }
+
+  .menu__logo {
+    margin-bottom: 30px;
+  }
+
+  .menu__site-list {
+    @include cancel-list;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .menu__site-item {
+    margin-bottom: 10px;
+  }
+
+  .menu__site-item a {
+    color: $blue-color;
+    text-decoration: none;
+    font-size: 26px;
+  }
+
+  .menu__login {
+    @include yellow-button;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .menu__login a {
+    padding: 20px 20px;
+    color: $dark-blue-color;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 0 auto;
+  }
+
+  .menu__contacts-list {
+    @include cancel-list;
+    text-align: center;
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .menu__contacts-item {
+    margin-bottom: 20px;
+  }
+
+  .menu__contacts-item-icon {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: $black-color;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+
+  .menu__contacts-item-icon svg {
+    color: $yellow-color;
+  }
+
+  .menu__social-list {
+    @include cancel-list;
+    @include flex-row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .menu__social-item {
+    margin-right: 20px;
+  }
+
+  .menu__social-item svg {
+    color: $light-grey-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu {
+    @include flex-row-space;
+    
+  }
+
+  .menu__site-list {
+    @include flex-row-space;
+    @include cancel-list;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .menu__site-item {
+    margin-right: 40px;
+    padding-top: 5px;
+  }
+
+  .menu__site-item a,
+  .menu__site-item svg {
+    @include white-link;
+  }
+
+  .menu__site-item svg {
+    color: $white-color;
+    text-decoration: none;
+  }
+
+  .menu__logo,
+  .menu__login,
+  .menu__contacts-list,
+  .menu__social-list {
+    display: none;
+  }
+}
