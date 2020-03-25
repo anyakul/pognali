@@ -20,13 +20,13 @@
 .companions__text {
   width: 75%;
   margin: 0 auto;
-  margin-bottom: 58px;
+  margin-bottom: 55px;
 }
 
 .companions__header {
   color: $orange-color;
-  margin-bottom: 18px;
-  font-size: 22px;
+  margin-bottom: 20px;
+  font-size: 21px;
 }
 
 .companions__intro {
@@ -46,7 +46,7 @@
 
 .companions__list {
   @include cancel-list;
-  width: 91%;
+  width: 92%;
   margin: 0 auto;
  margin-bottom: 20px;
 }
@@ -55,7 +55,7 @@
   background-color: $white-color;
   border-radius: 10px;
   text-align: center;
-  padding-bottom: 17px;
+  padding-bottom: 18px;
   position: relative;
   margin-bottom: 9px;
 }
@@ -63,6 +63,7 @@
 .companions__item-image {
   width: 100%;
   height: 270px;
+  border-radius: 10px 10px 0 0;
 }
 
 .companions__item-level {
@@ -161,7 +162,7 @@
 
 .companions__item-heshtags-item a {
   color: $very-dark-grey-color;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 17px;
   text-decoration: none;
 }
@@ -189,7 +190,7 @@
 .companions__button {
   @include yellow-button;
   border-radius: 12px;
-  width: 91%;
+  width: 92%;
   margin: 0 auto;
   padding: 23px 0;
 }
@@ -198,7 +199,7 @@
   @include flex-row-space;
   font-size: 16px;
   margin: 0 auto;
-  width: 83%;
+  width: 84%;
 }
 
 .companions__button--desktop {
@@ -207,7 +208,7 @@
 
 @media (min-width: $min-tablet-width) {
   .companions__big-wrapper {
-    padding-bottom: 90px;
+    padding-bottom: 88px;
     border-radius: 0 0 61px 61px;
   }
 
@@ -244,7 +245,7 @@
 
   .companions__list {
     @include flex-row-wrap;
-    margin-bottom: 69px;
+    margin-bottom: 71px;
     justify-content: space-between;
     width: 88%;
   }
@@ -289,8 +290,9 @@
   }
 
   .companions__button {
-    padding: 27px 0;
+    padding: 28px 0;
     width: 89%;
+    border-radius: 20px;
   }
 
   .companions__button-wrapper {
@@ -310,7 +312,7 @@
 
   .companions__wrapper {
     @include flex-row;
-    width: 92%;
+    width: 93%;
     padding-top: 130px;
   }
 
@@ -328,7 +330,7 @@
   }
 
   .companions__list {
-    width: 86%;
+    width: 87%;
   }
 
   .companions__item {

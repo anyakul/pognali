@@ -6,7 +6,7 @@
   @include section-border-radius;
   background-color: $light-blue-color;
   padding-top: 36px;
-  padding-bottom: 37px;
+  padding-bottom: 40px;
 }
 
 .profile__wrapper {
@@ -32,7 +32,7 @@
 
 .profile__list {
   @include cancel-list;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 }
 
 .profile__item {
@@ -48,8 +48,9 @@
 .profile__item-text {
   border-bottom: 1px solid $light-grey-color;
   width: 92%;
-  padding: 14px 0;
+  padding: 12px 0 14px 0;
   margin-right: 20px;
+  line-height: 17px;
 }
 
 .profile__item-header {
@@ -80,13 +81,14 @@
 }
 
 .profile__button {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
+  letter-spacing: 0.8px;
 }
 
 @media (min-width: $min-tablet-width) {
   .profile__big-wrapper {
-    padding-top: 65px;
+    padding-top: 70px;
     padding-bottom: 46px;
     border-radius: 0 0 57px 57px;
   }
@@ -144,6 +146,7 @@
     @include flex-row-space;
     font-size: 24px;
     margin-top: 5px;
+    padding: 18px 0 21px;
   }
 
   .profile__item-number {
@@ -159,10 +162,10 @@
   }
 
   .profile__button {
-    font-size: 18px;
+    font-size: 16px;
     @include flex-row;
     align-items: center;
-    
+    color: $dark-blue-color;
   }
   
   .profile__button-and-icon {
@@ -217,6 +220,7 @@
     background-repeat: no-repeat;
     background-size: 40%;
     width: 77%;
+    margin-left: 8px;
   }
 
   .profile__item {
@@ -230,7 +234,7 @@
     padding: 14px 0px 14px 0;
     order: 2;
     @include flex-row-space;
-    font-size: 24px;
+    font-size: 25px;
     margin-top: 5px;
   }
 
@@ -252,11 +256,10 @@
   }
 
   .profile__button {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     @include flex-row;
     align-items: center;
-    color: $dark-blue-color;
     
   }
   
@@ -267,7 +270,7 @@
 
   .profile__button-icon {
     display: block;
-    margin-right: 10px;
+    margin-right: 15px;
   }
   
   .profile__icon--tablet {
@@ -286,7 +289,7 @@
 
   
   .profile__button-icon {
-    padding: 19px 24px;
+    padding: 17px 20px;
     border-radius: 50%;
     background-color: #e1e5f1;
     margin-right: 25px;
