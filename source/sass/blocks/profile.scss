@@ -39,9 +39,17 @@
   @include flex-row-space;
   font-size: 14px;
   align-items: flex-start;
-  
+
   &:first-child .profile__item-text {
     border-top: 1px solid $light-grey-color;
+  }
+
+  &:nth-child(2n) .profile__item-number {
+    background-color: #ffbd2f;
+  }
+
+  &:nth-child(3n) .profile__item-number {
+    background-color: #ffd74b;
   }
 }
 
@@ -105,12 +113,11 @@
   .profile__header {
     font-size: 39px;
     line-height: 40px;
-   margin: 0 auto;
-   width: 70%;
-   text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
   }
 
-  
   .profile__icon--mobile {
     display: none;
   }
@@ -127,23 +134,23 @@
 
   .profile__item {
     padding-right: 30px;
-    
+
     &:first-child .profile__item-text {
       border-top: none;
     }
-    
+
     &:nth-child(2n) .profile__item-number {
       background-color: #ffbd2f;
     }
-    
+
     &:nth-child(3n) .profile__item-number {
       background-color: #ffd74b;
     }
   }
 
   .profile__item-text {
-    order: 2;
     @include flex-row-space;
+    order: 2;
     font-size: 24px;
     margin-top: 5px;
     padding: 18px 0 21px;
@@ -152,7 +159,7 @@
   .profile__item-number {
     padding: 22px 30px;
     font-size: 20px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-right: 21px;
   }
 
@@ -162,28 +169,24 @@
   }
 
   .profile__button {
-    font-size: 16px;
     @include flex-row;
+    font-size: 16px;
     align-items: center;
     color: $dark-blue-color;
   }
-  
+
   .profile__button-and-icon {
     @include flex-row-space;
     margin-right: 65px;
     margin-left: 15px;
   }
 
-  .profile__button-icon {
-    display: block;
-  }
-  
   .profile__icon--tablet {
     display: block;
   }
 
-  
   .profile__button-icon {
+    display: block;
     padding: 19px 24px;
     border-radius: 50%;
     background-color: #e1e5f1;
@@ -194,13 +197,11 @@
 @media (min-width: $desktop-width) {
   .profile__wrapper {
     width: 84%;
-    
   }
-  
+
   .profile__big-wrapper {
-  padding-top: 105px;
+    padding-top: 105px;
     padding-bottom: 165px;
-    
   }
 
   .profile__text {
@@ -210,7 +211,6 @@
   .profile__icon--mobile {
     display: none;
   }
-
 
   .profile__list {
     padding: 30px 0 30px 0;
@@ -227,13 +227,12 @@
     padding-right: 0;
   }
 
-
   .profile__item-text {
+    @include flex-row-space;
     border-bottom: none;
     width: 92%;
-    padding: 14px 0px 14px 0;
+    padding: 14px 0 14px 0;
     order: 2;
-    @include flex-row-space;
     font-size: 25px;
     margin-top: 5px;
   }
@@ -244,7 +243,7 @@
     background-color: #ffa430;
     font-size: 20px;
     color: $white-color;
-    margin-top: 0px;
+    margin-top: 0;
     order: 1;
     margin-right: 21px;
   }
@@ -256,13 +255,12 @@
   }
 
   .profile__button {
+    @include flex-row;
     font-size: 16px;
     font-weight: bold;
-    @include flex-row;
     align-items: center;
-    
   }
-  
+
   .profile__button-and-icon {
     @include flex-row-space;
     margin-right: 10px;
@@ -270,29 +268,23 @@
 
   .profile__button-icon {
     display: block;
-    margin-right: 15px;
-  }
-  
-  .profile__icon--tablet {
-    display: none;
-    margin-top: -233px;
-  }
-  
-  .profile__icon--desktop {
-    display: block;
-  }
-  
-  .profile__list-icon {
-    @include flex-row-space;
-    align-items: center;
-  }
-
-  
-  .profile__button-icon {
     padding: 17px 20px;
     border-radius: 50%;
     background-color: #e1e5f1;
     margin-right: 25px;
-    
+  }
+
+  .profile__icon--tablet {
+    display: none;
+    margin-top: -233px;
+  }
+
+  .profile__icon--desktop {
+    display: block;
+  }
+
+  .profile__list-icon {
+    @include flex-row-space;
+    align-items: center;
   }
 }

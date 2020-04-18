@@ -7,9 +7,7 @@
   background-color: $blue-color;
   background-image: url("../img/dark-blue-back.svg");
   background-repeat: no-repeat;
-// background-size: 100% 100%;
   padding-bottom: 30px;
-  
 }
 
 .companions__wrapper {
@@ -48,7 +46,7 @@
   @include cancel-list;
   width: 92%;
   margin: 0 auto;
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .companions__item {
@@ -76,30 +74,29 @@
   background-position: 0;
 }
 
-.companions__item-level--80 {
+.companions__item-level--eighty {
   left: 13px;
   top: 14px;
   background-image: url("../img/level-80.png");
 }
 
-.companions__item-level--99 {
+.companions__item-level--ninety-nine {
   background-image: url("../img/level-99.png");
 }
 
 .companions__item-country-list {
-  width: 90%;
   @include flex-row;
   @include cancel-list;
+  width: 90%;
   justify-content: center;
   margin: 0 auto;
   margin-top: -15px;
-   margin-bottom: 8px;
-  
+  margin-bottom: 8px;
 }
 
 .companions__item-country-item {
   margin-right: 16px;
-  
+
   &:last-child {
     margin-right: 0;
   }
@@ -121,8 +118,8 @@
   margin-bottom: 14px;
   position: relative;
   width: 100%;
-  
-  &:before {
+
+  &::before {
     content: "";
     position: absolute;
     top: 40%;
@@ -132,21 +129,17 @@
   }
 }
 
-.companions__item-name--offline {
-  &:before {
-    background-image: url("../img/companion-offline.svg");
-  }
+.companions__item-name--offline::before {
+  background-image: url("../img/companion-offline.svg");
 }
 
-.companions__item-name--online {
-  &:before {
-    background-image: url("../img/companion-online.svg");
-  }
+.companions__item-name--online::before {
+  background-image: url("../img/companion-online.svg");
 }
 
 .companions__item-heshtags-list {
   @include cancel-list;
-  @include flex-row-wrap;;
+  @include flex-row-wrap;
   width: 75%;
   margin: 0 auto;
   text-align: center;
@@ -159,7 +152,6 @@
   margin-right: 5px;
 }
 
-
 .companions__item-heshtags-item a {
   color: $very-dark-grey-color;
   font-size: 14px;
@@ -169,10 +161,9 @@
 
 .companions__item-transport-list {
   @include cancel-list;
-  @include flex-row;
- justify-content: space-between;
- width: 48%;
- margin: 0 auto;
+  @include flex-row-space;
+  width: 48%;
+  margin: 0 auto;
 }
 
 .companions__item-transport-item {
@@ -240,7 +231,7 @@
     font-size: 19px;
     line-height: 25px;
     width: 62%;
-    font-weight: bold
+    font-weight: bold;
   }
 
   .companions__list {
@@ -254,13 +245,17 @@
     padding-bottom: 26px;
     margin-right: 10px;
     width: 46%;
+
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
-  
-  .companions__item-name {    
-    &:before {
+
+  .companions__item-name {
+    font-size: 21px;
+    margin-bottom: 20px;
+
+    &::before {
       left: 12%;
     }
   }
@@ -271,13 +266,7 @@
   }
 
   .companions__item-country-list {
-     margin-bottom: 11px;
-    
-  }
-
-  .companions__item-name {
-    font-size: 21px;
-    margin-bottom: 20px;
+    margin-bottom: 11px;
   }
 
   .companions__item-heshtags-list {
@@ -296,13 +285,15 @@
   }
 
   .companions__button-wrapper {
+    @include flex-row-space;
     font-size: 23px;
     width: 89%;
+    align-items: center;
   }
-  
+
   .companions__button--desktop {
-  display: none;
-}
+    display: none;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -335,6 +326,7 @@
 
   .companions__item {
     width: 45%;
+
     &:nth-child(2n) {
       margin-right: 0;
     }
@@ -350,7 +342,7 @@
   }
 
   .companions__item-transport-list {
-   width: 44%;
+    width: 44%;
   }
 
   .companions__button {

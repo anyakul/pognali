@@ -19,5 +19,9 @@
 body {
   font-family: $bloggersans-regular;
   overflow-x: hidden;
-  background-color: $dark-blue-color;
+  background-color: $white-color;
+}
+
+.page-main {
+  background-color: $light-blue-color;
 }

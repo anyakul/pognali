@@ -1,0 +1,22 @@
+.catalog {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    @include flex-row-space;
+    @include page-width;
+    align-items: flex-start;
+  }
+
+  .catalog__filters {
+    order: 2;
+    width: 20%;
+  }
+
+  .catalog__companions {
+    order: 1;
+  }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 4" width="8" height="4">
+  <defs>
+    <filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.098   0 0 0 0 0.129   0 0 0 0 0.267   0 0 0 1 0" /> </filter>
+    <image width="10" height="5" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA1IiB3aWR0aD0iMTAiIGhlaWdodD0iNSI+Cgk8c3R5bGU+CgkJdHNwYW4geyB3aGl0ZS1zcGFjZTpwcmUgfQoJCS5zaHAwIHsgZmlsbDogIzAwMDAwMCB9IAoJPC9zdHlsZT4KCTxnIGlkPSJQYWdlIDEiPgoJCTxwYXRoIGlkPSJQYXRoIDEiIGNsYXNzPSJzaHAwIiBkPSJNMCwwbDUsNWw1LC01eiIgLz4KCTwvZz4KPC9zdmc+"/>
+  </defs>
+  <style>
+    tspan { white-space:pre }
+  </style>
+  <use id="dropdown.svg 80%" style="filter: url(#flt1)" href="#img1" transform="matrix(0.8,0,0,-0.8,0,4)"/>
+</svg>

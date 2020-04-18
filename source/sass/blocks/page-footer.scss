@@ -20,12 +20,13 @@
   margin-right: 0;
   border-radius: 50%;
   background-color: $yellow-color;
+  padding: 12px;
 }
 
 .page-footer__wrapper {
   @include page-width;
-  text-align: center;
   @include flex-column;
+  text-align: center;
   margin-bottom: 0;
 }
 
@@ -53,33 +54,18 @@
   }
 }
 
-.page-footer__social-link {
-  padding: 12px;
-}
-
 .page-footer__made-by {
   @include flex-row-space;
-  margin-bottom: 30px;
-  width: 90%;
-  align-items: center;
-}
-
-.page-footer__made-by {
+  @include page-width;
+  text-align: center;
   color: $black-color;
   text-decoration: none;
   border-top: 1px solid $light-grey-color;
   padding-top: 12px;
   font-size: 14px;
-}
-
-.page-footer__made-by {
-  @include flex-row-space;
-  @include page-width;
-  margin-bottom: 0;
-  text-align: center;
-  color: $black-color;
-  text-decoration: none;
   margin-bottom: 30px;
+  width: 90%;
+  align-items: center;
 }
 
 @media (min-width: $min-tablet-width) {
@@ -101,8 +87,8 @@
 
   .page-footer__wrapper {
     @include page-width;
-    width: 89%;
     @include flex-row-space;
+    width: 89%;
     align-items: center;
   }
 
@@ -114,7 +100,6 @@
   .page-footer__social-list {
     @include flex-row;
     @include cancel-list;
-    margin-bottom: 0;
     margin: 0;
   }
 
@@ -122,10 +107,9 @@
     padding: 20px 15px;
   }
 
-
   .page-footer__social-item {
     margin-right: 0;
-    
+
     &:last-child {
       margin-right: 0;
     }
@@ -133,19 +117,15 @@
 
   .page-footer__made-by {
     @include flex-row-space;
-    margin-bottom: 0;
     width: auto;
     border-top: none;
     margin: 0;
-  }
-
-  .page-footer__made-by {
-  padding-top: 0;
+    padding-top: 0;
     color: $black-color;
     text-decoration: none;
     font-size: 17px;
   }
-  
+
   .page-footer__made-by img {
     margin-left: 23px;
   }
@@ -167,7 +147,7 @@
     width: 200px;
     height: 45px;
   }
-  
+
   .page-footer__made-by {
     margin: 0;
   }
@@ -177,14 +157,14 @@
   }
 
   .page-footer__wrapper {
-    padding-bottom: 40px;
     @include flex-row;
+    padding-bottom: 40px;
     width: 96%;
   }
 
   .page-footer__social-link svg,
   .page-footer__made-by svg {
-    color: $black-color;  
+    color: $black-color;
   }
 
   .page-footer__social-list {
@@ -194,7 +174,8 @@
   }
 
   .page-footer__social-item {
-    padding: 0px;
+    padding: 0;
+
     &:last-child {
       margin-right: 0;
     }

@@ -1,11 +1,7 @@
 @mixin page-width {
-  width: 91%;
+  width: 92%;
   max-width: 1317px;
   margin: 0 auto;
-  
-  @media (min-width: $tablet-width) {
-    width: 89%;
-  }
 }
 
 @mixin flex-row {
@@ -20,33 +16,32 @@
   flex-wrap: wrap;
 }
 
-
 @mixin flex-column {
   display: flex;
   flex-direction: column;
 }
 
 @mixin yellow-button {
-    background-color: $yellow-color;
-    align-items: center;
-    padding: 10px 20px;
-    color: $dark-blue-color;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
+  background-color: $yellow-color;
+  align-items: center;
+  padding: 10px 20px;
+  color: $dark-blue-color;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
 
-    &:hover {
-      background-color: $light-orange-color;
-    }
-
-    &:active {
-      color: $svg-active-color;
-    }
+  &:hover {
+    background-color: $light-orange-color;
   }
+
+  &:active {
+    color: $svg-active-color;
+  }
+}
 
 @mixin section-border-radius {
   border-radius: 0 0 30px 30px;
-  
+
   @media (min-width: $tablet-width) {
     border-radius: 0 0 60px 60px;
   }
@@ -120,7 +115,7 @@
   border-radius: 20px;
   font-size: 22px;
   font-weight: bold;
-  
+
   &:hover {
     background-color: $dark-orange-color;
   }
@@ -134,19 +129,19 @@
 }
 
 @mixin white-link {
-    color: $white-color;
-    text-decoration: none;
-    text-transform: uppercase;
+  color: $white-color;
+  text-decoration: none;
+  text-transform: uppercase;
 
-    &:hover {
-      color: $yellow-color;
-    }
-
-    &:active,
-    &:focus {
-      color: $brown-color;
-    }
+  &:hover {
+    color: $yellow-color;
   }
+
+  &:active,
+  &:focus {
+    color: $brown-color;
+  }
+}
 
 @mixin text {
   font-size: 14px;
@@ -240,7 +235,6 @@
   color: $black-color;
   text-transform: uppercase;
 }
-
 
 @mixin stars-group {
   @include flex-row;

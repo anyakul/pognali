@@ -19,6 +19,10 @@
     margin-bottom: 10px;
   }
 
+  .menu__site-item--minus {
+    display: none;
+  }
+
   .menu__site-item a {
     color: $blue-color;
     text-decoration: none;
@@ -41,7 +45,6 @@
 
   .menu__contacts-list {
     @include cancel-list;
-    text-align: center;
     text-align: left;
     font-size: 16px;
   }
@@ -80,10 +83,17 @@
   }
 }
 
+@media (min-width: $min-tablet-width) {
+  .menu__site-list {
+    @include cancel-list;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .menu {
     @include flex-row-space;
-    
   }
 
   .menu__site-list {

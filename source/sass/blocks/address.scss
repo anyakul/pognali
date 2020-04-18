@@ -1,6 +1,6 @@
 .address {
-  background-color: $yellow-color;
   @include section-border-radius;
+  background-color: $yellow-color;
   position: relative;
   z-index: 5;
 }
@@ -43,7 +43,6 @@
   padding: 18px 21px;
   border-radius: 10px;
   font-size: 17px;
-  
 }
 
 @media (min-width: $min-tablet-width) {
@@ -73,7 +72,6 @@
     margin-bottom: 45px;
   }
 
-
   .address__item svg {
     @include yellow-button;
     width: 20px;
@@ -92,7 +90,6 @@
     padding: 26px 31px;
     border-radius: 17px;
     font-size: 21px;
-    
   }
 }
 
@@ -102,11 +99,10 @@
   }
 
   .address__wrapper {
+    @include flex-row;
     align-items: center;
     padding: 0;
-    @include flex-row;
     width: 80%;
-    padding-left: 18%;
   }
 
   .address__text {
@@ -121,7 +117,6 @@
     margin-bottom: 0;
     margin-right: 8%;
   }
-
 
   .address__item svg {
     @include yellow-button;
@@ -142,9 +137,8 @@
     padding: 26px 34px;
     border-radius: 28px;
     font-size: 21px;
-    
   }
-  
+
   .address__button svg {
     margin-left: 20px;
   }
