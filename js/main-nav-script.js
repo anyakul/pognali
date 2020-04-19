@@ -1,14 +1,16 @@
-var navMain = document.querySelector(".page-header__main-nav");
-var navToggle = document.querySelector(".page-header__toggle");
+'use strict';
 
-navMain.classList.remove("main-nav--nojs");
+var navMain = document.querySelector('.page-header__main-nav');
+var navToggle = document.querySelector('.page-header__toggle');
 
-navToggle.addEventListener("click", function() {
-  if (navMain.classList.contains("page-header__main-nav--closed")) {
-    navMain.classList.remove("page-header__main-nav--closed");
-    navMain.classList.add("page-header__main-nav--opened");
+navMain.classList.remove('main-nav--nojs');
+
+navToggle.addEventListener('click', function () {
+  if (navMain.classList.contains('page-header__main-nav--closed')) {
+    navMain.classList.remove('page-header__main-nav--closed');
+    navMain.classList.add('page-header__main-nav--opened');
   } else {
-    navMain.classList.add("page-header__main-nav--closed");
-    navMain.classList.remove("page-header__main-nav--opened");
+    navMain.classList.add('page-header__main-nav--closed');
+    navMain.classList.remove('page-header__main-nav--opened');
   }
 });
