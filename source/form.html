@@ -4,1004 +4,1458 @@
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="body-wrapper">
-      <header class="page-header">
-        <div class="page-header__wrapper">
-          <a class="page-header__logo">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/logo-desktop-white@2x.png">
-              <img class="page-header__logo-image" src="img/logo-mobile-white@2x.png" alt="pognali?" width="100" height="19">
-            </picture>
-          </a>
-          <nav class="main-nav main-nav--closed main-nav--nojs <!--(main-nav--opened)-->">
-            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-            <div class="main-nav__menu menu">
-              <div class="menu__wrapper">
-                <picture>
-                  <source media="(min-width: 768px)" srcset="img/logo-desktop-blue@2x.png">
-                  <img class="menu__logo" src="img/logo-mobile-blue@2x.png" alt="pognali?" width="100" height="19">
-                </picture>
-                <ul class="menu__site">
-                  <li class="menu__site-item">
-                    <a>
-                      <svg width="60" height="2">
-                        <use xlink:href="img/sprite.svg#qty-minus"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="menu__site-item">
-                    <a href="index.html">О сервисе</a>
-                  </li>
-                  <li class="menu__site-item">
-                    <a>Направления</a>
-                  </li>
-                  <li class="menu__site-item">
-                    <a href="catalog.html">Попутчики</a>
-                  </li>
-                </ul>
-                <a class="menu__login" href="login.html">Авторизиция</a>
-                <ul class="menu__contacts">
-                  <li class="menu__contacts-item">
-                    <a class="menu__contacts-icon menu__contacts-icon--phone" href="#">
-                      <svg width="18" height="18">
-                        <use xlink:href="img/sprite.svg#contacts-phone"></use>
-                      </svg>
-                    </a>
-                    <a class="menu__contacts-text">8 800 555-86-28</a>
-                  </li>
-                  <li class="menu__contacts-item">
-                    <a class="menu__contacts-icon menu__contacts-icon--email" href="#">
-                      <svg width="18" height="13">
-                        <use xlink:href="img/sprite.svg#contacts-mail"></use>
-                      </svg>
-                    </a>
-                    <a class="menu__contacts-text">mail@htmlacademy.ru</a>
-                  </li>
-                </ul>
-                <ul class="menu__social">
-                  <li class="menu__social-item">
-                    <a class="menu__social-link menu__social-link--facebook" href="https://vk.com/htmlacademy" aria-label="twitter">
-                      <svg width="11" height="21">
-                        <use xlink:href="img/sprite.svg#facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="menu__social-item">
-                    <a class="menu__social-link menu__social-link--vk" href="https://www.facebook.com/htmlacademy" aria-label="facebook">
-                      <svg width="23" height="12">
-                        <use xlink:href="img/sprite.svg#vk"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="menu__social-item">
-                    <a class="menu__social-link menu__social-link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="youtube">
-                      <svg width="18" height="18">
-                        <use xlink:href="img/sprite.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <ul class="page-header__contacts page-header__contacts--header">
-            <li class="page-header__contacts-item page-header__contacts-item--phone">
-              <a class="page-header__contacts-icon page-header__contacts-icon--phone" href="#">
-                <svg width="18" height="18">
-                  <use xlink:href="img/sprite.svg#phone"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-header__contacts-item page-header__contacts-item--email">
-              <a class="page-header__contacts-icon page-header__contacts-icon--email" href="#">
-                <svg width="18" height="13">
-                  <use xlink:href="img/sprite.svg#email"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-header__contacts-item">
-              <a class="page-header__login" href="login.html">Авторизиция</a>
-            </li>
-          </ul>
-        </div>
-      </header>
-      <main class="main-page">
-        <section class="account-form">
-          <h1 class="account-form__header">Направления</h1>
-          <div class="account-form__level">
-          <a class="directions-form__main" href="index.html">На главную</a>
-          <a class="directions-form__icon" href="index.html">back</a>
-        </section>
-        <section class="account">
-          <h1 class="visually-hidden">Данные пользователя</h1>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
           <picture>
-            <!--<source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-account-desktop@1x.webp 1x, img/photo-account-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x">-
-            <source media="(min-width: 1200px)" srcset="img/photo-account-desktop@1x.jpg 1x, img/photo-account-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">-->
-            <img class="account__image" src="img/photo-account-mobile@2x.jpg" alt="попутчик Демин"> <!--srcset="img/photo-account-mobile@1x.jpg 1x, img/photo-account-mobile@2x.jpg 2x"-->
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+            <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png 1x" srcset="img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x" alt="pognali?">
           </picture>
-          <a class="account__button"><span>Сменить</span> фото</a>
-          <div class="account__tegs">
-            <p class="account__tegs-header">Тэги</p>
-            <p class="companions-list__tegs-list">#бургер #бар #футбол #концерт #крафт</p>
+        </a>
+        <nav class="page-header__main-nav page-header__main-nav--closedz page-header__main-nav--nojs <!--(page-header__main-nav--opened)-->">
+          <button class="page-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="page-header__menu menu">
+            <a class="menu__logo" href="index.html">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+                <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+                <img class="menu__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x" alt="pognali?" width="100" height="19">
+              </picture>
+            </a>
+            <ul class="menu__site-list">
+              <li class="menu__site-item menu__site-item--minus">
+                <a>
+                  <svg width="60" height="2">
+                    <use xlink:href="img/sprite.svg#qty-minus"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu__site-item">
+                <a href="index.html">О сервисе</a>
+              </li>
+              <li class="menu__site-item">
+                <a href="form.html">Направления</a>
+              </li>
+              <li class="menu__site-item">
+                <a href="catalog.html">Попутчики</a>
+              </li>
+            </ul>
+            <a class="menu__login" href="login.html">Авторизиция</a>
+            <ul class="menu__contacts-list">
+              <li class="menu__contacts-item">
+                <a class="menu__contacts-item-icon" href="tel:8005558628">
+                  <svg width="18">
+                    <use xlink:href="img/sprite.svg#contacts-phone"></use>
+                  </svg>
+                </a>
+                <a class="menu__contacts-item-text" href="tel:8005558628">8 800 555-86-28</a>
+              </li>
+              <li class="menu__contacts-item">
+                <a class="menu__contacts-item-icon" href="mailto:mail@htmlacademy.ru">
+                  <svg width="22">
+                    <use xlink:href="img/sprite.svg#contacts-mail"></use>
+                  </svg>
+                </a>
+                <a class="menu__contacts-item-text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+            <ul class="menu__social-list">
+              <li class="menu__social-item">
+                <a class="menu__social-link" href="https://vk.com/htmlacademy" aria-label="vk">
+                  <svg width="11" height="21">
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu__social-item">
+                <a class="menu__social-link" href="https://www.facebook.com/htmlacademy" aria-label="facebook">
+                  <svg width="23" height="12">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu__social-item">
+                <a class="menu__social-link" href="https://www.instagram.com/htmlacademy" aria-label="instagram">
+                  <svg width="18" height="18">
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <ul class="page-header__contacts">
+          <li class="page-header__contacts-item page-header__contacts-item--phone">
+            <a class="page-header__contacts-icon" href="tel:8005558628">
+              <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-header__contacts-item page-header__contacts-item--email">
+            <a class="page-header__contacts-icon" href="mailto:mail@htmlacademy.ru">
+              <svg width="25" height="13">
+                <use xlink:href="img/sprite.svg#contacts-mail"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-header__contacts-item page-header__contacts-item--login">
+            <a href="login.html">Авторизиция</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="page-main page-main--inner">
+      <section class="promo promo--form-page">
+        <div class="promo__wrapper promo__wrapper--form-page">
+          <div class="promo__text-account">
+            <h1 class="promo__header promo__header--inner-page">Направления</h1>
+            <div class="promo__account-level promo__account-level--80">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="57" fill="none" stroke="#ff8d30" stroke-width="6"></circle>
+              </svg>
+              <p class="promo__account-level-number">80</p>
+              <p class="promo__account-level-word">level</p>
+            </div>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+              <img class="promo__account-image" src="img/demin-mobile@2x.jpg" alt="попутчик Демин">
+            </picture>
+          </div>
+          <svg class="promo__icon-line promo__icon-line--form" height="5">
+            <use xlink:href="img/sprite.svg#orange-underline"></use>
+          </svg>
+        </div><!-- -->
+      </section>
+      <section class="account">
+        <div class="account__wrapper">
+          <div class="account__level account__level--80">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="57" fill="none" stroke="#ff8d30" stroke-width="6"></circle>
+            </svg>
+            <p class="account__level-number">80</p>
+            <p class="account__level-word">level</p>
+          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+            <img class="account__image" src="img/demin-mobile@2x.jpg" alt="попутчик Демин">
+          </picture>
+          <div class="account__button-item">
+            <button class="account__button">
+              <span class="account__button-span">Сменить </span> фото
+            </button>
+          </div>
+          <div class="account__hashtags">
+            <p class="account__hashtags-header">Тэги</p>
+            <textarea>#бургер #бар #футбол #концерт #крафт</textarea>
           </div>
           <div class="account__transport">
             <p class="account__transport-header">Транспорт</p>
             <ul class="account__transport-list">
-              <li class="account__transport-item account__transport-item--active"></li>
-              <li class="account__transport-item account__transport-item--active"></li>
-              <li class="account__transport-item"></li>
-              <li class="account__transport-item account__transport-item--active"></li>
+              <li class="account__transport-item account__transport-item--active">
+                <input class="visually-hidden" type="checkbox">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-plane"></use>
+                </svg>
+              </li>
+              <li class="account__transport-item account__transport-item--active">
+                <input class="visually-hidden" type="checkbox">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-bus"></use>
+                </svg>
+              </li>
+              <li class="account__transport-item account__transport-item--active">
+                <input class="visually-hidden" type="checkbox">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-bike></use>
+                </svg>
+              </li>
+              <li class="account__transport-item account__transport-item--active">
+                <input class="visually-hidden" type="checkbox">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-run"></use>
+                </svg>
+              </li>
+              <li class="account__transport-item account__transport-item--active">
+                <input class="visually-hidden" type="checkbox">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-run"></use>
+                </svg>
+              </li>
             </ul>
           </div>
-        </section>
-        <section class="my-plans">
-          <h2 class="my-plans__header">Мои планы</h2>
-          <div class="my-plans__item">
-            <p class="my-plans__countries">1. Франция, Италия</p>
-            <p class="my-plans__companions-number">3 попутчика</p>
-            <p class="my-plans__dates">26 мар - 29 мар</p>
-            <a class="my-plans__change">Изменить</a>
-          </div>
-          <div class="my-plans__item">
-            <p class="my-plans__countries">2. Тайланд, Индонезия</p>
-            <p class="my-plans__companions-number">1 попутчик</p>
-            <p class="my-plans__dates">1 июл - 15 июл</p>
-            <a class="my-plans__change">Изменить</a>
-          </div>
-        </section>
-        <section class="add-plans">
-          <h2 class="add-plans__header">Добавить план:</h2>
-          <div class="add-plans__item add-plans__item--dates">
-            <h3 class="add-plans__item-header">Шаг 1. Даты пребывания</h3>
-            <p class="add-plans__item-intro">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</div>
-            <ul class="add-plans__steps-list">
-              <li class="add-plans__steps-list add-plans__steps-list--active">Даты</li>
-              <li class="add-plans__steps-list">Маршрут</li>
-              <li class="add-plans__steps-list">Развлечения</li>
-            </ul>
-            <form class="add-plans__form">
-              <fieldset class="add-plans__form-item">
-                <legend class="add-plans__form-legend">Ищу попутчиков:</legend>
-                <input class="add-plans__form-number-companions" type="number">
-              </fieldset>
-              <fieldset class="add-plans__form-item">
-                <legend class="add-plans__form-legend">Длительность:</legend>
-                <input class="add-plans__form-number-days" type="number">
-              </fieldset>
-              <fieldset class="add-plans__form-item">
-                <input class="add-plans__form-number-days" type="checkbox" name="children-welcome" id="children-welcome" checked="">
-                <label class="add-plans__children-welcome" for="children-welcome">Можно с детьми</label>
-              </fieldset>
-              <fieldset class="add-plans__form-item">
-                <ul class="add-plans__month">
-                  <li class="add-plans__month-item">Март</li>
+        </div>
+      </section>
+      <section class="plans">
+        <div class="plans__wrapper">
+          <h2 class="plans__header">Мои планы:</h2>
+          <ul class="plans__list">
+            <li class="plans__item">
+              <div class="plans__item-number-countries">
+                <p class="plans__item-number">1.</p>
+                <ul class="plans__item-countries-list">
+                  <li class="plans__item-countries">Франция,</li>
+                  <li class="plans__item-countries">Италия</li>
                 </ul>
-                <table class="add-plan__table">
-                  <thead class="add-plan__thead">
-                    <td class="add-plans__thead-data add-plan__thead-data--weekday">П</td>
-                    <td class="add-plans__thead-data add-plan__thead-data--weekday">В</td>
-                    <td class="add-plans__thead-data add-plan__thead-data--weekday">С</td>
-                    <td class="add-plans__thead-data add-plan__thead-data--weekday">Ч</td>
-                    <td class="add-plans__thead-data add-plan__thead-data--weekday">П</td>
-                    <td class="add-plans__thead-data add-plan__thead-data--weekend">С</td>
-                    <td class="add-plans__thead-data add-plan__thead-data--weekend">В</td>
-                  </thead>
-                  <tr class="add-plan__table-row">
-                    <td class="add-plans__table-data add-plan__table-data--past">24</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">25</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">26</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">27</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">28</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">1</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">2</td>
-                  </tr>
-                  <tr class="add-plan__table-row">
-                    <td class="add-plans__table-data add-plan__table-data--past">3</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">4</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">5</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">6</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">7</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">8</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">9</td>
-                  </tr>
-                  <tr class="add-plan__table-row">
-                    <td class="add-plans__table-data add-plan__table-data--past">10</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">11</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">12</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">13</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">14</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">15</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">16</td>
-                  </tr>
-                  <tr class="add-plan__table-row">
-                    <td class="add-plans__table-data add-plan__table-data--past">17</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">18</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">19</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">20</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">21</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">22</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">23</td>
-                  </tr>
-                  <tr class="add-plan__table-row">
-                    <td class="add-plans__table-data add-plan__table-data--past">24</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">25</td>
-                    <td class="add-plans__table-data add-plan__table-data--past">26</td>
-                    <td class="add-plans__table-data add-plan__table-data--chosen">27</td>
-                    <td class="add-plans__table-data add-plan__table-data--chosen">28</td>
-                    <td class="add-plans__table-data add-plan__table-data--chosen">29</td>
-                    <td class="add-plans__table-data add-plan__table-data--available">30</td>
-                  </tr>
-                  <tr class="add-plan__table-row">
-                    <td class="add-plans__table-data add-plan__table-data--available">31</td>
-                    <td class="add-plans__table-data add-plan__table-data--available">1</td>
-                    <td class="add-plans__table-data add-plan__table-data--available">2</td>
-                    <td class="add-plans__table-data add-plan__table-data--available">3</td>
-                    <td class="add-plans__table-data add-plan__table-data--available">4</td>
-                    <td class="add-plans__table-data add-plan__table-data--available">5</td>
-                    <td class="add-plans__table-data add-plan__table-data--available">6</td>
-                  </tr>
-                </table>
-              </fieldset>
-              <a class="add-plans__button">Следующий шаг</a>
-            </form>
-          </div>
-          <div class="add-plans__item add-plans__item--rote">
-            <h2 class="add-plans__header">Шаг 2. Маршрут</h2>
-            <p class="add-plans__intro">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+              </div>
+              <div class="plans__item-people-dates-button">
+                  <p class="plans__item-people-number">3 попутчика</p>
+                  <p class="plans__item-dates">26 мар - 29 мар</p>
+                <a class="plans__item-change">Изменить</a>
+              </div>
+            </li>
+            <li class="plans__item">
+              <div class="plans__item-number-countries">
+                <p class="plans__item-number">2.</p>
+                <ul class="plans__item-countries-list">
+                  <li class="plans__item-countries">Тайланд,</li>
+                  <li class="plans__item-countries">Индонезия</li>
+                </ul>
+              </div>
+              <div class="plans__item-people-dates-button">
+                  <p class="plans__item-people-number">1 попутчик</p>
+                  <p class="plans__item-dates">1 июл - 15 июл</p>
+                <a class="plans__item-change">Изменить</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="add-plans">
+        <div class="add-plans__wrapper">
+          <div class="add-plans__header-buttons">
+            <h2 class="add-plans__header">Добавить план:</h2>
             <ul class="add-plans__steps-list">
-              <li class="add-plans__steps-list">Даты</li>
-              <li class="add-plans__steps-list add-plans__steps-list--active">Маршрут</li>
-              <li class="add-plans__steps-list">Развлечения</li>
+              <li class="add-plans__steps-item">
+                <button class="add-plans__steps-button add-plans__steps-button--active"></button>
+              </li>
+              <li class="add-plans__steps-item">
+                <button class="add-plans__steps-button"></button>
+              </li>
+              <li class="add-plans__steps-item">
+                <button class="add-plans__steps-button"></button>
+              </li>
             </ul>
-            <form class="add-plans__form">
-              <fieldset class="add-plans__form-item">
-                <div class="filter-list-places__countries">
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">А</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-a">
-                      <li class="filter-list-places__country-item"><a href="#">Австралия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Австрия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Азербайджан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Албания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Алжир</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ангола</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Андорра</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Антигуа и Барбуда</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Аргентина</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Армения</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Афганистан</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Б</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-b">
-                      <li class="filter-list-places__country-item"><a href="#">Багамские Острова</a></li>
-                      <li class="filter-list__country-item"><a href="#">Бангладеш</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Барбадос</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бахрейн</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Белоруссия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Белиз</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бельгия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бенин</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Болгария</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Боливия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Босния и Герцеговина</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ботсвана</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бразилия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бруней</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Буркина-Фасо</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бурунди</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бутан</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">В</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-v">
-                      <li class="filter-list-places__country-item"><a href="#">Вануату</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Великобритания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Венгрия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Венесуэла</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Восточный Тимор</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Вьетнам</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Г</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-g">
-                      <li class="filter-list-places__country-item"><a href="#">Габон</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гаити</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гайана</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гамбия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гана</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гватемала</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гвинея</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гвинея-Бисау</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Германия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гондурас</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гренада</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Греция</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Грузия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Д</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-d">
-                      <li class="filter-list-places__country-item"><a href="#">Дания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Джибути</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Доминика</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Доминикана</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Е</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-ye">
-                      <li class="filter-list-places__country-item"><a href="#">Египет</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ё</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-yo">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ж</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-zh">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">З</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-z">
-                      <li class="filter-list-places__country-item"><a href="#">Замбия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Зимбабве</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">И</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-i">
-                      <li class="filter-list-places__country-item"><a href="#">Израиль</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Индия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Индонезия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Иордания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ирак</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Иран</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ирландия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Исландия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Испания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Италия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list__countries-item">
-                    <button class="filter-list-places__button filter-list__item filter-list-places--opened filter-list-places--nojs">Й</button>
-                    <ul class="filter-list__item filter-list__item--letter-y">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">К</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-k">
-                      <li class="filter-list-places__country-item"><a href="#">Кабо-Верде</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Казахстан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Камбоджа</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Камерун</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Канада</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Катар</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кения</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кипр</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Киргизия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кирибати</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Китай</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Колумбия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Коморы</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Конго</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">КНДР</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Республика Корея</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Коста-Рика</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кот-д’Ивуар</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Куба</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кувейт</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Л</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-L">
-                      <li class="filter-list-places__country-item"><a href="#">Лаос</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Латвия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Лесото</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Либерия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ливан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ливия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Литва</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Лихтенштейн</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Люксембург</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">М</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-m">
-                      <li class="filter-list-places__country-item"><a href="#">Маврикий</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мавритания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мадагаскар</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Малави</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Малайзия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мали</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мальдивы</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мальта</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Марокко</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Маршалловы Острова</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мексика</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мозамбик</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Молдавия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Монако</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Монголия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мьянма</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Н</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-n">
-                      <li class="filter-list-places__country-item"><a href="#">Намибия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Науру</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Непал</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Нигер</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Нигерия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Нидерланды</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Никарагуа</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Новая Зеландия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Норвегия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">О</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-o">
-                      <li class="filter-list__country-item"><a href="#">ОАЭ</a></li>
-                      <li class="filter-list__country-item"><a href="#">Оман</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">П</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-p">
-                      <li class="filter-list-places__country-item"><a href="#">Пакистан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Палау</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Панама</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Папуа — Новая Гвинея</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Парагвай</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Перу</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Польша</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Португалия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Р</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-r">
-                      <li class="filter-list__country-item"><a href="#">Россия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">С</button>
-                    <ul class="filter-list-places__item filter-list__item--letters">
-                      <li class="filter-list-places__country-item"><a href="#">Сальвадор</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Самоа</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сан-Марино</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сан-Томе и Принсипи</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Саудовская Аравия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Северная Македония</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сейшелы</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сенегал</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сент-Люсия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сербия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сингапур</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сирия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Словакия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Словения</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">США</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сомали</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Судан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Суринам</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сьерра-Леоне</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Т</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-t">
-                      <li class="filter-list-places__country-item"><a href="#">Таджикистан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Таиланд</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Танзания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Того</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Тонга</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Тринидад и Тобаго</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Тувалу</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Тунис</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Туркмения</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Турция</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">У</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-u">
-                      <li class="filter-list-places__country-item"><a href="#">Уганда</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Узбекистан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Украина</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Уругвай</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ф</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-f">
-                      <li class="filter-list-places__country-item"><a href="#">Фиджи</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Филиппины</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Финляндия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Франция</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Х</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-h">
-                      <li class="filter-list-places__country-item"><a href="#">Хорватия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ц</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-ts">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ч</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-ch">
-                      <li class="filter-list-places__country-item"><a href="#">Чад</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Черногория</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Чехия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Чили</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ш</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-sh">
-                      <li class="filter-list-places__country-item"><a href="#">Швейцария</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Швеция</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Шри-Ланка</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Щ</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-shch">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Э</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-e">
-                      <li class="filter-list-places__country-item"><a href="#">Эквадор</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Эритрея</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Эсватини</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Эстония</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Эфиопия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ю</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-yu">
-                      <li class="filter-list-places__country-item"><a href="#">ЮАР</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Южный Судан</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Я</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-ya">
-                      <li class="filter-list-places__country-item"><a href="#">Ямайка</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Япония</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset class="add-plans__form-item">
-                <div class="filter-list-places__countries">
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">А</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-a">
-                      <li class="filter-list-places__country-item"><a href="#">Австралия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Австрия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Азербайджан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Албания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Алжир</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ангола</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Андорра</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Антигуа и Барбуда</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Аргентина</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Армения</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Афганистан</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Б</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-b">
-                      <li class="filter-list-places__country-item"><a href="#">Багамские Острова</a></li>
-                      <li class="filter-list__country-item"><a href="#">Бангладеш</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Барбадос</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бахрейн</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Белоруссия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Белиз</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бельгия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бенин</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Болгария</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Боливия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Босния и Герцеговина</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ботсвана</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бразилия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бруней</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Буркина-Фасо</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бурунди</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Бутан</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">В</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-v">
-                      <li class="filter-list-places__country-item"><a href="#">Вануату</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Великобритания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Венгрия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Венесуэла</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Восточный Тимор</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Вьетнам</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Г</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-g">
-                      <li class="filter-list-places__country-item"><a href="#">Габон</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гаити</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гайана</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гамбия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гана</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гватемала</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гвинея</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гвинея-Бисау</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Германия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гондурас</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Гренада</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Греция</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Грузия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Д</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-d">
-                      <li class="filter-list-places__country-item"><a href="#">Дания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Джибути</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Доминика</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Доминикана</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Е</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-ye">
-                      <li class="filter-list-places__country-item"><a href="#">Египет</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ё</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-yo">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ж</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-zh">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">З</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-z">
-                      <li class="filter-list-places__country-item"><a href="#">Замбия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Зимбабве</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">И</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-i">
-                      <li class="filter-list-places__country-item"><a href="#">Израиль</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Индия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Индонезия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Иордания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ирак</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Иран</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ирландия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Исландия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Испания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Италия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list__countries-item">
-                    <button class="filter-list-places__button filter-list__item filter-list-places--opened filter-list-places--nojs">Й</button>
-                    <ul class="filter-list__item filter-list__item--letter-y">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">К</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-k">
-                      <li class="filter-list-places__country-item"><a href="#">Кабо-Верде</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Казахстан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Камбоджа</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Камерун</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Канада</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Катар</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кения</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кипр</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Киргизия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кирибати</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Китай</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Колумбия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Коморы</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Конго</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">КНДР</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Республика Корея</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Коста-Рика</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кот-д’Ивуар</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Куба</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Кувейт</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Л</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-L">
-                      <li class="filter-list-places__country-item"><a href="#">Лаос</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Латвия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Лесото</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Либерия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ливан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Ливия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Литва</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Лихтенштейн</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Люксембург</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">М</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-m">
-                      <li class="filter-list-places__country-item"><a href="#">Маврикий</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мавритания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мадагаскар</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Малави</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Малайзия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мали</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мальдивы</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мальта</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Марокко</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Маршалловы Острова</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мексика</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мозамбик</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Молдавия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Монако</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Монголия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Мьянма</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Н</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-n">
-                      <li class="filter-list-places__country-item"><a href="#">Намибия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Науру</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Непал</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Нигер</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Нигерия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Нидерланды</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Никарагуа</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Новая Зеландия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Норвегия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">О</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-o">
-                      <li class="filter-list__country-item"><a href="#">ОАЭ</a></li>
-                      <li class="filter-list__country-item"><a href="#">Оман</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">П</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-p">
-                      <li class="filter-list-places__country-item"><a href="#">Пакистан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Палау</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Панама</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Папуа — Новая Гвинея</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Парагвай</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Перу</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Польша</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Португалия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Р</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-r">
-                      <li class="filter-list__country-item"><a href="#">Россия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">С</button>
-                    <ul class="filter-list-places__item filter-list__item--letters">
-                      <li class="filter-list-places__country-item"><a href="#">Сальвадор</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Самоа</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сан-Марино</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сан-Томе и Принсипи</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Саудовская Аравия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Северная Македония</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сейшелы</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сенегал</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сент-Люсия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сербия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сингапур</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сирия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Словакия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Словения</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">США</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сомали</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Судан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Суринам</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Сьерра-Леоне</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Т</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-t">
-                      <li class="filter-list-places__country-item"><a href="#">Таджикистан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Таиланд</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Танзания</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Того</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Тонга</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Тринидад и Тобаго</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Тувалу</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Тунис</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Туркмения</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Турция</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">У</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-u">
-                      <li class="filter-list-places__country-item"><a href="#">Уганда</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Узбекистан</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Украина</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Уругвай</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ф</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-f">
-                      <li class="filter-list-places__country-item"><a href="#">Фиджи</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Филиппины</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Финляндия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Франция</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Х</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-h">
-                      <li class="filter-list-places__country-item"><a href="#">Хорватия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ц</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-ts">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ч</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-ch">
-                      <li class="filter-list-places__country-item"><a href="#">Чад</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Черногория</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Чехия</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Чили</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ш</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-sh">
-                      <li class="filter-list-places__country-item"><a href="#">Швейцария</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Швеция</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Шри-Ланка</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Щ</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-shch">
-                    </ul>
-                    <span>Стран на тукую букву не найдено</span>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Э</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-e">
-                      <li class="filter-list-places__country-item"><a href="#">Эквадор</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Эритрея</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Эсватини</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Эстония</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Эфиопия</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ю</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-yu">
-                      <li class="filter-list-places__country-item"><a href="#">ЮАР</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Южный Судан</a></li>
-                    </ul>
-                  </div>
-                  <div class="filter-list-places__countries-item">
-                    <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Я</button>
-                    <ul class="filter-list-places__item filter-list__item--letter-ya">
-                      <li class="filter-list-places__country-item"><a href="#">Ямайка</a></li>
-                      <li class="filter-list-places__country-item"><a href="#">Япония</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </fieldset>
-              <a class="add-plans__button">Следующий шаг</a>
-              <a class="add-plans__button--back">На шаг назад</a>
-            </form>
           </div>
-          <div class="add-plans__item add-plans__item--dates">
-            <h2 class="add-plans__header">Шаг 3. Развлечения</h2>
-            <p class="add-plans__intro">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-            <ul class="add-plans__steps-list">
-              <li class="add-plans__steps-list">Даты</li>
-              <li class="add-plans__steps-list add-plans__steps-list--active">Маршрут</li>
-              <li class="add-plans__steps-list">Развлечения</li>
-            </ul>
-            <form class="add-plans__form">
-              <label>Босния и Герцеговина<textarea name="message" placeholder="План действий"></textarea></label>
-              <label>Чехословакия<textarea name="message" placeholder="В свободной форме"></textarea></label>
-            </form>
-            <a class="add-plans__button"><span class="add-plans__button--next-step">Следующий шаг</span><span class="add-plans__button--send">Отправить</span></a>
-            <a class="add-plans__button--back">На шаг назад</a>
-          </div>
-        </section>
-      </main>
-      <footer class="page-footer">
-        <a class="page-header__logo">
+          <form class="add-plans__form">
+            <fieldset class="add-plans__form-step add-plans__form-step--dates">
+              <div class="add-plans__form-step-wrapper">
+                <div class="add-plans__form-step-text-list">
+                  <legend class="add-plans__form-step-text">
+                    <h3 class="add-plans__form-step-header">Шаг 1.<br> Даты пребывания</h3>
+                    <p class="add-plans__form-step-intro">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                  </legend>
+                  <ul class="add-plans__steps-list-in-step">
+                    <li class="add-plans__steps-item-in-step add-plans__steps-item-in-step--active">
+                      <button class="add-plans__steps-in-step-button add-plans__steps-in-step-button--active">Даты</button>
+                    </li>
+                    <li class="add-plans__steps-item-in-step">
+                      <button class="add-plans__steps-in-step-button">Маршрут</button>
+                    </li>
+                    <li class="add-plans__steps-item-in-step">
+                      <button class="add-plans__steps-in-step-button">Развлечения</button>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="add-plans__form-step-list">
+                  <li class="add-plans__form-item add-plans__form-item--people">
+                    <p class="add-plans__form-item-legend">Ищу попутчиков:</p>
+                    <p class="add-plans__form-item-unit">Чел.</p>
+                    <div class="add-plans__form-item-button-input">
+                      <button class="add-plans__form-item-button add-plans__form-item-button--minus"></button>
+                      <input class="add-plans__form-item-input" type="number" value="2">
+                      <button class="add-plans__form-item-button add-plans__form-item-button--plus"></button>
+                    </div>
+                  </li>
+                  <li class="add-plans__form-item add-plans__form-item--time">
+                    <p class="add-plans__form-item-legend">Длительность</p>
+                    <p class="add-plans__form-item-unit">Дн.</p>
+                    <div class="add-plans__form-item-button-input">
+                      <button class="add-plans__form-item-button add-plans__form-item-button--minus"></button>
+                      <input class="add-plans__form-item-input" type="number" value="2">
+                      <button class="add-plans__form-item-button add-plans__form-item-button--plus"></button>
+                    </div>
+                  </li>
+                  <li class="add-plans__form-item add-plans__form-item--children">
+                    <input class="visually-hidden add-plans__form-item-checkbox" type="checkbox" name="children-welcome" id="children-welcome" checked>
+                    <label class="add-plans__form-item-label" for="children-welcome">Можно с детьми</label>
+                  </li>
+                  <li class="add-plans__form-item add-plans__form-item--date">
+                    <div class="add-plans__form-item-month">
+                      <button class="add-plans__form-item-button-month add-plans__form-item-button-month--left">
+                        <svg width="18" height="18">
+                          <use xlink:href="img/sprite.svg#month-arrow-left"></use>
+                        </svg>
+                      </button>
+                      <ul class="add-plans__form-item-month-list">
+                        <li class="add-plans__form-item-month-item add-plans__form-item-month-item--active">Март 2019</li>
+                        <li class="add-plans__form-item-month-item">Апрель 2019</li>
+                      </ul>
+                      <button class="add-plans__form-item-button-month add-plans__form-item-button-month--right">
+                        <svg width="20" height="20">
+                          <use xlink:href="img/sprite.svg#month-arrow-right"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <table class="add-plans__form-item-calendar">
+                      <tr>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--weekday">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--one">П</span>
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--two">Пн</span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--weekday">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--one">В</span>
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--two">Вт</span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--weekday">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--one">С</span>
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--two">Ср</span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--weekday">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--one">Ч</span>
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--two">Чт</span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--weekday">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--one">П</span>
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--two">Пт</span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--weekend">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--one">С</span>
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--two">Сб</span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--weekend">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--one">В</span>
+                            <span class="add-plans__form-item-calendar-cell-text-letter add-plans__form-item-calendar-cell-text-letter--two">Вс</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">23</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">24</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">25</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">26</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">27</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">28</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">1</p>
+                            <span class="add-plans__form-item-calendar-cell-month">Мар</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">2</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">3</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">4</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">5</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">6</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">7</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">8</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">9</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">10</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">11</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">12</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">13</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">14</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">15</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">16</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">17</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">18</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">19</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">20</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">21</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">22</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">23</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">24</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--past">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">25</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--chosen-active">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">26</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                          <span class="add-plans__form-item-calendar-cell-info">Заезд</span>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--chosen add-plans__form-item-calendar-cell--chosen-between">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">27</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--chosen">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">28</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                          <span class="add-plans__form-item-calendar-cell-info">Выезд</span>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--available">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">29</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--available">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">30</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--available">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">31</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--available">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">1</p>
+                            <span class="add-plans__form-item-calendar-cell-month">Апр</span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--available">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">2</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--available">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">3</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--available">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">4</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                        <td class="add-plans__form-item-calendar-cell add-plans__form-item-calendar-cell--available">
+                          <div class="add-plans__form-item-calendar-cell-text">
+                            <p class="add-plans__form-item-calendar-cell-day">5</p>
+                            <span class="add-plans__form-item-calendar-cell-month"></span>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </li>
+                </ul>
+                <div class="add-plans__buttons">
+                  <button class="add-plans__button add-plans__button--next-step">
+                    <span class="add-plans__button-text">
+                      Следующий шаг
+                    </span>
+                    <svg width="10" height="18">
+                      <use xlink:href="img/sprite.svg#triangle-arrow-right">
+                      </use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="add-plans__form-step add-plans__form-step--rote">
+              <div class="add-plans__form-step-wrapper">
+                <div class="add-plans__form-step-text-list">
+                  <legend class="add-plans__form-step-text">
+                    <h3 class="add-plans__form-step-header">Шаг 2.<br> Маршрут</h3>
+                    <p class="add-plans__form-step-intro">Укажите страны, которые вы хотели по посетить.<br> Это может быть одна или сразу несколько.</p>
+                  </legend>
+                  <ul class="add-plans__steps-list-in-step">
+                    <li class="add-plans__steps-item-in-step">
+                      <button class="add-plans__steps-in-step-button">Даты</button>
+                    </li>
+                    <li class="add-plans__steps-item-in-step add-plans__steps-item-in-step--active">
+                      <button class="add-plans__steps-in-step-button">Маршрут</button>
+                    </li>
+                    <li class="add-plans__steps-item-in-step">
+                      <button class="add-plans__steps-in-step-button">Развлечения</button>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="add-plans__form-step-list">
+                  <li class="add-plans__form-item add-plans__form-item--country">
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--chosen">Босния и Герцеговина</button>
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--flag">
+                      <img class="add-plans__form-item-flag-item" src="img/flag-bosnia.svg" alt="флаг Боснии и Герцеговины">
+                    </button>
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--delete">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </li>
+                  <li class="add-plans__form-item add-plans__form-item--country">
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--chosen">Чехия</button>
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--flag">
+                      <img class="add-plans__form-item-flag-item" src="img/flag-czech.svg" alt="флаг Чехии">
+                    </button>
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--delete">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </li>
+                  <li class="add-plans__form-item add-plans__form-item--choose-country">
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--to-choose">Выберите страну</button>
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--flag-icon">
+                      <img class="add-plans__form-item-flag-icon" src="img/dropdown-form.svg">
+                    </button>
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--delete">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </li>
+                  <li class="add-plans__form-item add-plans__form-item--add-country">
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--add">Добавить страну</button>
+                    <button class="add-plans__form-item-button-countries add-plans__form-item-button-countries--flag-add">
+                      <img class="add-plans__form-item-flag-icon" src="img/plus.svg">
+                    </button>
+                  </li>
+                </ul>
+                <div class="add-plans__buttons">
+                  <button class="add-plans__button add-plans__button--next-step">
+                    <span class="add-plans__button-text">
+                      Следующий шаг
+                    </span>
+                    <svg width="10" height="18">
+                      <use xlink:href="img/sprite.svg#triangle-arrow-right">
+                      </use>
+                    </svg>
+                  </button>
+                  <button class="add-plans__button add-plans__button--previous-step">
+                    <svg width="10" height="18">
+                      <use xlink:href="img/sprite.svg#triangle-arrow-left">
+                      </use>
+                    </svg>
+                    <span class="add-plans__button-text">На шаг назад</span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+      <!--              <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">А</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-a">
+                        <li class="filter-list-places__country-item"><a href="#">Австралия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Австрия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Азербайджан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Албания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Алжир</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ангола</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Андорра</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Антигуа и Барбуда</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Аргентина</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Армения</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Афганистан</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Б</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-b">
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">В</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-v">
+                        <li class="filter-list-places__country-item"><a href="#">Вануату</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Великобритания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Венгрия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Венесуэла</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Восточный Тимор</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Вьетнам</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Г</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-g">
+                        <li class="filter-list-places__country-item"><a href="#">Габон</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гаити</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гайана</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гамбия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гана</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гватемала</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гвинея</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гвинея-Бисау</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Германия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гондурас</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гренада</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Греция</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Грузия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Д</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-d">
+                        <li class="filter-list-places__country-item"><a href="#">Дания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Джибути</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Доминика</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Доминикана</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Е</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-ye">
+                        <li class="filter-list-places__country-item"><a href="#">Египет</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ё</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-yo">
+                      </ul>
+                      <span>Стран на тукую букву не найдено</span>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ж</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-zh">
+                      </ul>
+                      <span>Стран на тукую букву не найдено</span>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">З</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-z">
+                        <li class="filter-list-places__country-item"><a href="#">Замбия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Зимбабве</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">И</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-i">
+                        <li class="filter-list-places__country-item"><a href="#">Израиль</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Индия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Индонезия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Иордания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ирак</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Иран</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ирландия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Исландия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Испания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Италия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list__countries-item">
+                      <button class="filter-list-places__button filter-list__item filter-list-places--opened filter-list-places--nojs">Й</button>
+                      <ul class="filter-list__item filter-list__item--letter-y">
+                      </ul>
+                      <span>Стран на тукую букву не найдено</span>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">К</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-k">
+                        <li class="filter-list-places__country-item"><a href="#">Кабо-Верде</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Казахстан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Камбоджа</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Камерун</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Канада</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Катар</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кения</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кипр</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Киргизия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кирибати</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Китай</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Колумбия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Коморы</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Конго</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">КНДР</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Республика Корея</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Коста-Рика</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кот-д’Ивуар</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Куба</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кувейт</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Л</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-L">
+                        <li class="filter-list-places__country-item"><a href="#">Лаос</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Латвия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Лесото</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Либерия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ливан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ливия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Литва</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Лихтенштейн</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Люксембург</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">М</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-m">
+                        <li class="filter-list-places__country-item"><a href="#">Маврикий</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мавритания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мадагаскар</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Малави</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Малайзия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мали</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мальдивы</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мальта</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Марокко</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Маршалловы Острова</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мексика</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мозамбик</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Молдавия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Монако</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Монголия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мьянма</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Н</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-n">
+                        <li class="filter-list-places__country-item"><a href="#">Намибия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Науру</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Непал</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Нигер</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Нигерия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Нидерланды</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Никарагуа</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Новая Зеландия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Норвегия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">О</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-o">
+                        <li class="filter-list__country-item"><a href="#">ОАЭ</a></li>
+                        <li class="filter-list__country-item"><a href="#">Оман</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">П</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-p">
+                        <li class="filter-list-places__country-item"><a href="#">Пакистан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Палау</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Панама</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Папуа — Новая Гвинея</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Парагвай</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Перу</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Польша</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Португалия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Р</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-r">
+                        <li class="filter-list__country-item"><a href="#">Россия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">С</button>
+                      <ul class="filter-list-places__item filter-list__item--letters">
+                        <li class="filter-list-places__country-item"><a href="#">Сальвадор</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Самоа</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сан-Марино</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сан-Томе и Принсипи</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Саудовская Аравия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Северная Македония</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сейшелы</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сенегал</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сент-Люсия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сербия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сингапур</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сирия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Словакия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Словения</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">США</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сомали</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Судан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Суринам</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сьерра-Леоне</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Т</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-t">
+                        <li class="filter-list-places__country-item"><a href="#">Таджикистан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Таиланд</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Танзания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Того</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Тонга</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Тринидад и Тобаго</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Тувалу</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Тунис</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Туркмения</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Турция</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">У</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-u">
+                        <li class="filter-list-places__country-item"><a href="#">Уганда</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Узбекистан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Украина</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Уругвай</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ф</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-f">
+                        <li class="filter-list-places__country-item"><a href="#">Фиджи</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Филиппины</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Финляндия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Франция</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Х</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-h">
+                        <li class="filter-list-places__country-item"><a href="#">Хорватия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ц</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-ts">
+                      </ul>
+                      <span>Стран на тукую букву не найдено</span>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ч</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-ch">
+                        <li class="filter-list-places__country-item"><a href="#">Чад</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Черногория</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Чехия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Чили</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ш</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-sh">
+                        <li class="filter-list-places__country-item"><a href="#">Швейцария</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Швеция</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Шри-Ланка</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Щ</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-shch">
+                      </ul>
+                      <span>Стран на тукую букву не найдено</span>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Э</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-e">
+                        <li class="filter-list-places__country-item"><a href="#">Эквадор</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Эритрея</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Эсватини</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Эстония</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Эфиопия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ю</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-yu">
+                        <li class="filter-list-places__country-item"><a href="#">ЮАР</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Южный Судан</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Я</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-ya">
+                        <li class="filter-list-places__country-item"><a href="#">Ямайка</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Япония</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="add-plans__form-item">
+                  <div class="filter-list-places__countries">
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">А</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-a">
+                        <li class="filter-list-places__country-item"><a href="#">Австралия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Австрия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Азербайджан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Албания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Алжир</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ангола</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Андорра</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Антигуа и Барбуда</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Аргентина</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Армения</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Афганистан</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Б</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-b">
+                        <li class="filter-list-places__country-item"><a href="#">Багамские Острова</a></li>
+                        <li class="filter-list__country-item"><a href="#">Бангладеш</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Барбадос</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Бахрейн</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Белоруссия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Белиз</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Бельгия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Бенин</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Болгария</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Боливия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Босния и Герцеговина</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ботсвана</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Бразилия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Бруней</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Буркина-Фасо</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Бурунди</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Бутан</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">В</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-v">
+                        <li class="filter-list-places__country-item"><a href="#">Вануату</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Великобритания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Венгрия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Венесуэла</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Восточный Тимор</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Вьетнам</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Г</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-g">
+                        <li class="filter-list-places__country-item"><a href="#">Габон</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гаити</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гайана</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гамбия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гана</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гватемала</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гвинея</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гвинея-Бисау</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Германия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гондурас</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Гренада</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Греция</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Грузия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Д</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-d">
+                        <li class="filter-list-places__country-item"><a href="#">Дания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Джибути</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Доминика</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Доминикана</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Е</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-ye">
+                        <li class="filter-list-places__country-item"><a href="#">Египет</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">З</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-z">
+                        <li class="filter-list-places__country-item"><a href="#">Замбия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Зимбабве</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">И</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-i">
+                        <li class="filter-list-places__country-item"><a href="#">Израиль</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Индия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Индонезия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Иордания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ирак</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Иран</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ирландия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Исландия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Испания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Италия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list__countries-item">
+                      <button class="filter-list-places__button filter-list__item filter-list-places--opened filter-list-places--nojs">Й</button>
+                      <ul class="filter-list__item filter-list__item--letter-y">
+                      </ul>
+                      <span>Стран на тукую букву не найдено</span>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">К</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-k">
+                        <li class="filter-list-places__country-item"><a href="#">Кабо-Верде</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Казахстан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Камбоджа</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Камерун</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Канада</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Катар</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кения</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кипр</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Киргизия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кирибати</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Китай</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Колумбия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Коморы</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Конго</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">КНДР</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Республика Корея</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Коста-Рика</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кот-д’Ивуар</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Куба</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Кувейт</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Л</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-L">
+                        <li class="filter-list-places__country-item"><a href="#">Лаос</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Латвия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Лесото</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Либерия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ливан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Ливия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Литва</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Лихтенштейн</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Люксембург</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">М</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-m">
+                        <li class="filter-list-places__country-item"><a href="#">Маврикий</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мавритания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мадагаскар</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Малави</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Малайзия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мали</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мальдивы</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мальта</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Марокко</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Маршалловы Острова</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мексика</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мозамбик</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Молдавия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Монако</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Монголия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Мьянма</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Н</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-n">
+                        <li class="filter-list-places__country-item"><a href="#">Намибия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Науру</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Непал</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Нигер</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Нигерия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Нидерланды</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Никарагуа</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Новая Зеландия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Норвегия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">О</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-o">
+                        <li class="filter-list__country-item"><a href="#">ОАЭ</a></li>
+                        <li class="filter-list__country-item"><a href="#">Оман</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">П</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-p">
+                        <li class="filter-list-places__country-item"><a href="#">Пакистан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Палау</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Панама</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Папуа — Новая Гвинея</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Парагвай</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Перу</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Польша</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Португалия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Р</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-r">
+                        <li class="filter-list__country-item"><a href="#">Россия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">С</button>
+                      <ul class="filter-list-places__item filter-list__item--letters">
+                        <li class="filter-list-places__country-item"><a href="#">Сальвадор</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Самоа</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сан-Марино</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сан-Томе и Принсипи</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Саудовская Аравия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Северная Македония</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сейшелы</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сенегал</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сент-Люсия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сербия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сингапур</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сирия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Словакия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Словения</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">США</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сомали</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Судан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Суринам</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Сьерра-Леоне</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Т</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-t">
+                        <li class="filter-list-places__country-item"><a href="#">Таджикистан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Таиланд</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Танзания</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Того</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Тонга</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Тринидад и Тобаго</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Тувалу</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Тунис</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Туркмения</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Турция</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">У</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-u">
+                        <li class="filter-list-places__country-item"><a href="#">Уганда</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Узбекистан</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Украина</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Уругвай</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ф</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-f">
+                        <li class="filter-list-places__country-item"><a href="#">Фиджи</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Филиппины</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Финляндия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Франция</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Х</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-h">
+                        <li class="filter-list-places__country-item"><a href="#">Хорватия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ч</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-ch">
+                        <li class="filter-list-places__country-item"><a href="#">Чад</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Черногория</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Чехия</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Чили</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ш</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-sh">
+                        <li class="filter-list-places__country-item"><a href="#">Швейцария</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Швеция</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Шри-Ланка</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Э</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-e">
+                        <li class="filter-list-places__country-item"><a href="#">Эквадор</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Эритрея</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Эсватини</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Эстония</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Эфиопия</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Ю</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-yu">
+                        <li class="filter-list-places__country-item"><a href="#">ЮАР</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Южный Судан</a></li>
+                      </ul>
+                    </div>
+                    <div class="filter-list-places__countries-item">
+                      <button class="filter-list-places__button filter-list-places__button--opened filter-list-places__button--nojs">Я</button>
+                      <ul class="filter-list-places__item filter-list__item--letter-ya">
+                        <li class="filter-list-places__country-item"><a href="#">Ямайка</a></li>
+                        <li class="filter-list-places__country-item"><a href="#">Япония</a></li>
+                      </ul>
+                    </div>-->
+            <fieldset class="add-plans__form-step add-plans__form-step--actions">
+              <div class="add-plans__form-step-wrapper">
+                <div class="add-plans__form-step-text-list">
+                  <legend class="add-plans__form-step-text">
+                    <h3 class="add-plans__form-step-header">Шаг 3. <br>Развлечения</h3>
+                    <p class="add-plans__form-step-intro">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                  </legend>
+                  <ul class="add-plans__steps-list-in-step">
+                    <li class="add-plans__steps-item-in-step">
+                      <button class="add-plans__steps-in-step-button">Даты</button>
+                    </li>
+                    <li class="add-plans__steps-item-in-step">
+                      <button class="add-plans__steps-in-step-button">Маршрут</button>
+                    </li>
+                    <li class="add-plans__steps-item-in-step add-plans__steps-item-in-step--active">
+                      <button class="add-plans__steps-in-step-button">Развлечения</button>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="add-plans__form-step-list add-plans__form-step-list--actions">
+                  <li class="add-plans__form-item add-plans__form-item--country-actions">
+                    <div class="add-plans__form-item-legend-flag">
+                      <p class="add-plans__form-item-legend">Босния и Герцеговина</p>
+                      <div class="add-plans__form-item-flag add-plans__form-item-flag--actions">
+                        <img class="add-plans__form-item-flag-item add-plans__form-item-flag-item--actions" src="img/flag-bosnia.svg" alt="флаг Боснии и Герцеговины">
+                      </div>
+                    </div>
+                    <textarea class="add-plans__form-item-textarea" name="message" placeholder="План действий"></textarea>
+                  </li>
+                  <li class="add-plans__form-item add-plans__form-item--country-actions">
+                    <div class="add-plans__form-item-legend-flag">
+                      <p class="add-plans__form-item-legend">Чехия</p>
+                      <div class="add-plans__form-item-flag add-plans__form-item-flag--actions">
+                        <img class="add-plans__form-item-flag-item add-plans__form-item-flag-item--actions" src="img/flag-czech.svg" alt="флаг Чехии">
+                      </div>
+                    </div>
+                    <textarea class="add-plans__form-item-textarea" name="message" placeholder="План действий">Пить пиво и лизить по старым замкам, наслаждаться архитектурой и вот это все</textarea>
+                  </li>
+                </ul>
+                <div class="add-plans__buttons">
+                  <button class="add-plans__button add-plans__button--next-step">
+                    <span class="add-plans__button-text"type="submit">
+                      Отправить
+                    </span>
+                    <svg width="10" height="18">
+                      <use xlink:href="img/sprite.svg#triangle-arrow-right">
+                      </use>
+                    </svg>
+                  </button>
+                  <button class="add-plans__button add-plans__button--previous-step">
+                    <svg width="10" height="18">
+                      <use xlink:href="img/sprite.svg#triangle-arrow-left">
+                      </use>
+                    </svg>
+                    <span class="add-plans__button-text">На шаг назад</span>
+                  </button>
+                </div>
+            </fieldset>
+          </form>
+        </div>
+      </section><!---->
+    </main>
+    <footer class="page-footer page-footer--form">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/logo-desktop-white@2x.png">
-            <img src="img/logo-mobile-blue@2x.png" alt="pognali?">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img src="img/logo-mobile-blue@2x.png" srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x" alt="pognali?">
           </picture>
         </a>
         <ul class="page-footer__social-list social-list--footer">
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--twitter buttons" href="https://vk.com/htmlacademy" aria-label="twitter">
-              <svg width="16" height="14">
-                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link page-footer__social-link--facebook" href="https://vk.com/htmlacademy" aria-label="twitter">
+              <svg width="16" height="23">
+                <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="social-list__item ">
-            <a class="social-list__link social-list__link--facebook buttons" href="https://www.facebook.com/htmlacademy" aria-label="facebook">
-              <svg width="9" height="18">
-                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="https://www.facebook.com/htmlacademy" aria-label="facebook">
+              <svg width="31" height="16">
+                <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
             </a>
           </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--youtube buttons" href="https://www.instagram.com/htmlacademy" aria-label="youtube">
-              <svg width="20" height="14">
-                <use xlink:href="img/sprite.svg#icon-youtube"></use>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="https://www.instagram.com/htmlacademy" aria-label="youtube">
+              <svg width="23" height="23">
+                <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <a class="page-footer__made-by" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-          <svg class="page-footer__image" width="27" height="34">
-            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
-          </svg>
+        <a class="page-footer__made-by" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="page-footer__made-by-text">Разработано</span>
+          <img class="page-footer__made-by-icon" src="img/htmlacademy.svg" width="27" height="40" alt="htmlacademy">
         </a>
-      </footer>
-    </div>
+      </div>
+    </footer>
     <script src="js/main-nav-script.js"></script>
   </body>
 </html>

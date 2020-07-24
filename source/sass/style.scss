@@ -6,23 +6,28 @@
 //header
 @import "blocks/page-header.scss";
 @import "blocks/menu.scss";
-@import "blocks/contacts.scss";
-@import "blocks/promo.scss";
 
 //главная страница
+@import "blocks/promo.scss";
 @import "blocks/choose.scss";
 @import "blocks/about-service.scss";
 @import "blocks/directions.scss";
-@import "blocks/companions.scss";
+@import "blocks/people.scss";
 @import "blocks/profile.scss";
 @import "blocks/register.scss";
 @import "blocks/address.scss";
 @import "blocks/map.scss";
-@import "blocks/page-footer.scss";
 
 // Страница каталога
-@import "blocks/catalog.scss";
 @import "blocks/filter-by-place.scss";
-@import "blocks/filter-by-companion.scss";
-@import "blocks/companions-catalog.scss";
+@import "blocks/catalog.scss";
+@import "blocks/filter-by-people.scss";
+@import "blocks/people-catalog.scss";
 @import "blocks/catalog-pagination.scss";
+
+//Страница формы
+
+@import "blocks/account.scss";
+@import "blocks/plans.scss";
+@import "blocks/add-plans.scss";
+@import "blocks/page-footer.scss";

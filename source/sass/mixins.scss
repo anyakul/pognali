@@ -1,8 +1,127 @@
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+//ШИРИНА СТРАНИЦЫ
 @mixin page-width {
-  width: 92%;
-  max-width: 1317px;
+  width: 84%;
+  margin: 0 auto;
+
+  @media (min-width: $min-tablet-width) {
+    width: 89%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 94%;
+    max-width: 1317px;
+  }
+}
+
+@mixin inner-page-width {
+  width: 84%;
+  margin: 0 auto;
+
+  @media (min-width: $min-tablet-width) {
+    width: 81%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 94%;
+    max-width: 1317px;
+  }
+}
+
+//ЦВЕТ СЕКЦИИ
+
+@mixin header-promo-bg-color {
+  background-color: $bg-mobile-blue-color;
+
+  @media (min-width: $min-tablet-width) {
+    background-color: $bg-tablet-dark-blue-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $bg-desktop-dark-blue-color;
+  }
+}
+
+@mixin dark-section {
+  background-color: $blue-color;
+}
+
+@mixin light-section {
+  background-color: $light-blue-color;
+}
+
+@mixin content-width {
+  width: 82%;
   margin: 0 auto;
 }
+
+@mixin cancel-list {
+  list-style: none;
+}
+
+@mixin popup-all-width {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  width: 100%;
+  background-color: $white-color;
+}
+
+//ЖЕЛТАЯ КНОПКА
+
+@mixin button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+@mixin yellow-button {
+  @include button;
+  background-color: $yellow-color;
+  color: $dark-blue-color;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 0 10px;
+  font-size: 16px;
+
+  &:active,
+  &:focus,
+  &:active svg,
+  &:focus svg {
+    color: $brown-hover-color;
+  }
+
+  &:hover {
+    background-color: $light-orange-color;
+  }
+
+  &:active a {
+    color: $svg-active-color;
+  }
+}
+
+@mixin pseudoelement {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+//ФЛЕКСБОКСЫ
 
 @mixin flex-row {
   display: flex;
@@ -12,7 +131,6 @@
 
 @mixin flex-row-wrap {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -21,37 +139,9 @@
   flex-direction: column;
 }
 
-@mixin yellow-button {
-  background-color: $yellow-color;
-  align-items: center;
-  padding: 10px 20px;
-  color: $dark-blue-color;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-
-  &:hover {
-    background-color: $light-orange-color;
-  }
-
-  &:active {
-    color: $svg-active-color;
-  }
-}
-
-@mixin section-border-radius {
-  border-radius: 0 0 30px 30px;
-
-  @media (min-width: $tablet-width) {
-    border-radius: 0 0 60px 60px;
-  }
-}
-
 @mixin flex-row-space {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: nowrap;
 }
 
 @mixin flex-row-space-wrap {
@@ -70,64 +160,6 @@
   flex-wrap: wrap;
 }
 
-@mixin background {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@mixin cancel-list {
-  list-style: none;
-}
-
-@mixin button {
-  background-color: transparent;
-  border: none;
-}
-
-@mixin blue-color-button {
-  background-color: transparent;
-  border: none;
-  font-size: 17px;
-  line-height: 25px;
-  position: relative;
-  color: $blue-color;
-  cursor: pointer;
-  outline: none;
-
-  &:hover,
-  &:focus {
-    color: $light-blue-color;
-  }
-
-  &:active {
-    color: $dark-blue-color;
-  }
-}
-
-@mixin yellow-button {
-  @include flex-row-space;
-  border: none;
-  align-items: center;
-  background-color: $yellow-color;
-  color: $dark-blue-color;
-  text-decoration: none;
-  border-radius: 20px;
-  font-size: 22px;
-  font-weight: bold;
-
-  &:hover {
-    background-color: $dark-orange-color;
-  }
-
-  &:active,
-  &:focus,
-  &:active svg,
-  &:focus svg {
-    color: $brown-hover-color;
-  }
-}
-
 @mixin white-link {
   color: $white-color;
   text-decoration: none;
@@ -140,6 +172,798 @@
   &:active,
   &:focus {
     color: $brown-color;
+  }
+
+  a {
+    color: $white-color;
+    text-decoration: none;
+  }
+}
+
+@mixin circle-for-svg {
+  position: relative;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+@mixin logo {
+  width: 100px;
+  height: 19px;
+
+  @media (min-width: $min-tablet-width) {
+    width: 165px;
+    height: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+@mixin login {
+  @include yellow-button;
+  padding: 16px 0;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+
+  a {
+    color: $dark-blue-color;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}
+
+//Контакты темные
+@mixin black-contacts-item {
+  display: flex;
+  align-items: center;
+
+  a {
+    &:first-child {
+      margin-right: 18px;
+    }
+
+    @media (min-width: $min-tablet-width) {
+      font-size: 28px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:first-child {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  &--mail {
+    svg {
+      width: 18px;
+    }
+
+    a {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      @media (min-width: $min-tablet-width) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@mixin black-contacts-circle-with-svg {
+  @include circle-for-svg;
+  width: 45px;
+  height: 45px;
+  background-color: $black-color;
+
+  svg {
+    @include center-absolute-element;
+    color: $yellow-color;
+    width: 20px;
+
+    @media (min-width: $min-tablet-width) {
+      width: 25px;
+    }
+  }
+
+  @media (min-width: $min-tablet-width) {
+    width: 65px;
+    height: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@mixin yellow-orange-list {
+  &:first-child b {
+    background-color: $orange-profile-color;
+  }
+
+  &:nth-child(2n) b {
+    background-color: $dark-orange-color;
+  }
+
+  &:nth-child(3n) b {
+    background-color: $light-dark-orange-color;
+  }
+}
+
+//Контакты светлые
+@mixin contacts-list {
+  @include cancel-list;
+  @include flex-row;
+  text-align: center;
+}
+
+@mixin contacts-item {
+  @include circle-for-svg;
+  color: $black-color;
+
+  svg {
+    @include center-absolute-element;
+    color: $black-color;
+  }
+
+  &--email {
+    background-color: $light-orange-color;
+
+    &:hover {
+      background-color: $light-orange-hover-color;
+    }
+  }
+
+  &--phone {
+    background-color: $orange-color;
+
+    &:hover {
+      background-color: $orange-hover-color;
+    }
+  }
+
+  &--login {
+    @include login;
+    height: auto;
+  }
+}
+
+//ЗАГОЛОВОК И ТЕКСТ О СЕКЦИИ
+
+@mixin section-text-wide {
+  padding-left: 24px;
+  width: 87%;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black-color;
+
+  @media (min-width: $min-tablet-width) {
+    padding-left: 33px;
+    width: 47%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    width: 55%;
+  }
+}
+
+@mixin section-text {
+  padding-left: 24px;
+  width: 76%;
+  line-height: 24px;
+  color: $black-color;
+
+  @media (min-width: $min-tablet-width) {
+    padding-left: 33px;
+    width: 49%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 70px;
+    width: 55%;
+  }
+}
+
+@mixin section-header {
+  color: $orange-color;
+  font-size: 21px;
+  margin-bottom: 20px;
+
+  @media (min-width: $min-tablet-width) {
+    font-size: 40px;
+    margin-bottom: 70px;
+  }
+}
+
+@mixin section-header-form-page {
+  color: $dark-blue-color;
+  font-size: 21px;
+
+  @media (min-width: $min-tablet-width) {
+    font-size: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+    padding-left: 70px;
+  }
+}
+
+@mixin section-intro {
+  font-family: $bloggersans-light;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+
+  @media (min-width: $min-tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+@mixin section-intro-additional {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: bold;
+  color: $white-color;
+
+  @media (min-width: $min-tablet-width) {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
+
+@mixin section-list {
+  @media (min-width: $min-tablet-width) {
+    width: 90%;
+  }
+}
+
+//Желтые кнопки
+@mixin yellow-button-svg {
+  position: absolute;
+  right: 18px;
+  top: 0;
+  left: auto;
+  bottom: 0;
+  margin: auto 0;
+  width: 17px;
+  height: 15px;
+
+  @media (min-width: $min-tablet-width) {
+    right: 30px;
+  }
+}
+
+@mixin yellow-button-text {
+  position: relative;
+  left: 22px;
+
+  @media (min-width: $min-tablet-width) {
+    left: 33px;
+  }
+}
+
+@mixin yellow-button-with-svg-in-service {
+  @include flex-row-space;
+  @include yellow-button;
+  position: relative;
+  width: 85%;
+  padding: 23px 0;
+  border-radius: 17px;
+  font-size: 16px;
+
+  @media (min-width: $min-tablet-width) {
+    padding: 30px 0 28px 0;
+    font-size: 22px;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 42%;
+    font-size: 21px;
+  }
+
+  svg {
+    @include yellow-button-svg;
+  }
+
+  span {
+    @include yellow-button-text;
+  }
+}
+
+@mixin yellow-button-with-svg {
+  @include flex-row-space;
+  @include yellow-button;
+  padding: 23px 0;
+  border-radius: 17px;
+  position: relative;
+  font-size: 16px;
+
+  @media (min-width: $min-tablet-width) {
+    padding: 30px 0 28px 0;
+    font-size: 22px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 77%;
+    margin: 0;
+    font-size: 21px;
+  }
+
+  svg {
+    @include yellow-button-svg;
+  }
+
+  span {
+    @include yellow-button-text;
+  }
+}
+
+@mixin yellow-button-with-svg-in-form {
+  @include flex-row-space;
+  @include yellow-button;
+  position: relative;
+  width: 80px;
+  height: 60px;
+  padding: 0;
+  margin-left: -35px;
+  font-size: 22px;
+  border-radius: 0 10px 10px 0;
+
+  @media (min-width: $min-tablet-width) {
+    width: 98px;
+    height: 81px;
+    margin-left: -18px;
+    border-radius: 0 16px 16px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 37%;
+    height: 81px;
+    margin-left: -25px;
+    padding: 0 38px 0 37px;
+    border-radius: 0 20px 20px 0;
+  }
+
+  svg {
+    @include center-absolute-element;
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      margin: 0;
+    }
+  }
+
+  span {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}
+
+@mixin yellow-button-with-svg-form-page {
+  @include flex-row-space;
+  @include yellow-button;
+  border-radius: 15px;
+  font-size: 15px;
+  border: none;
+
+  @media (min-width: $min-tablet-width) {
+    width: 54%;
+    text-transform: none;
+    padding: 26px 0;
+  }
+
+  svg {
+    @include yellow-button-svg;
+    position: relative;
+    display: none;
+
+    @media (min-width: $min-tablet-width) {
+      display: block;
+    }
+  }
+
+  span {
+    @include yellow-button-text;
+    margin: 0 auto;
+    left: 0;
+
+    @media (min-width: $min-tablet-width) {
+      margin: 0;
+      font-size: 21px;
+    }
+  }
+}
+
+@mixin yellow-button-with-border {
+  @include flex-row-space;
+  @include yellow-button;
+  border-radius: 10px;
+  border: 2px solid $dark-blue-color;
+  width: 98%;
+  position: relative;
+  padding: 20px 0;
+
+  @media (min-width: $min-tablet-width) {
+    padding: 25px 0;
+    font-size: 22px;
+    width: 90%;
+  }
+
+  svg {
+    @include yellow-button-svg;
+  }
+
+  span {
+    @include yellow-button-text;
+  }
+}
+
+@mixin profile-item {
+  @include flex-row-space;
+  align-items: flex-start;
+
+  div {
+    height: 100%;
+    border-bottom: $grey-border;
+  }
+
+  &:first-child div {
+    border-top: $grey-border;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+@mixin profile-item-text {
+  width: 100%;
+  margin-right: 15px;
+  padding: 13px 0 14px;
+  font-size: 14px;
+
+  @media (min-width: $min-tablet-width) {
+    @include flex-row-space;
+    order: 2;
+    margin-right: 0;
+    padding: 21px 0 23px;
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 78px 26px 0;
+  }
+}
+
+//КРУГИ ДЛЯ SVG И РАСПОЛОЖЕНИЕ SVG ПО ЦЕНТРУ КРУГА, КОНТАКТЫ
+
+@mixin center-absolute-element {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@mixin center-absolute-element-x {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+@mixin yellow-circle {
+  @include circle-for-svg;
+  width: 45px;
+  height: 45px;
+  background-color: $yellow-color;
+
+  @media (min-width: $min-tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
+
+  svg {
+    @include center-absolute-element;
+    color: $black-color;
+  }
+}
+
+@mixin item-transport {
+  height: 32px;
+  width: 32px;
+  background-color: $white-color;
+  border-radius: 50%;
+  position: relative;
+
+  svg {
+    @include center-absolute-element;
+    @include filter-item;
+  }
+
+  &--active svg {
+    color: $blue-color;
+    width: 20px;
+  }
+}
+
+//округление секции
+@mixin section-border-radius {
+  border-radius: 0 0 30px 30px;
+
+  @media (min-width: $min-tablet-width) {
+    border-radius: 0 0 61px 61px;
+  }
+}
+
+@mixin section-border-radius-inner-page {
+  border-radius: 0 0 22px 22px;
+
+  @media (min-width: $min-tablet-width) {
+    border-radius: 0 0 61px 61px;
+  }
+}
+
+@mixin section-border-radius-form-page {
+  border-radius: 32px 32px 0 0;
+
+  @media (min-width: $min-tablet-width) {
+    border-radius: 55px 55px 0 0;
+  }
+}
+
+//СЕКЦИИ НАХОДЯТ ДРУГ НА ДРУГА
+@mixin section-above-another {
+  position: relative;
+}
+
+@mixin section-above-and-under-another {
+  position: relative;
+  margin-top: -30px;
+
+  @media (min-width: $min-tablet-width) {
+    margin-top: -50px;
+  }
+}
+
+@mixin section-above-and-under-another-inner-page {
+  @include section-border-radius-inner-page;
+  position: relative;
+  margin-top: -30px;
+
+  @media (min-width: $min-tablet-width) {
+    margin-top: -50px;
+  }
+}
+
+//Элемент списка
+@mixin item {
+  background-color: $white-color;
+  border-radius: 10px;
+}
+
+@mixin item-image {
+  width: 100%;
+  height: 110px;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  margin-bottom: -14px;
+}
+
+@mixin item-wrapper {
+  width: 82%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 30;
+}
+
+//уровень компанона
+@mixin people-level {
+  border-radius: 50%;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    stroke-dasharray: 358;
+  }
+
+  &--99 {
+    stroke-dashoffset: 12;
+  }
+
+  &--80 {
+    stroke-dashoffset: 60;
+  }
+
+  &--50 {
+    stroke-dashoffset: 177;
+  }
+
+  &--25 {
+    stroke-dashoffset: 265;
+  }
+}
+
+@mixin level-number-white {
+  text-align: center;
+  font-weight: bold;
+  color: $white-color;
+}
+
+@mixin level-word-grey {
+  margin: 0 auto;
+  border-top: 1px solid $dark-grey-color;
+  padding-top: 5px;
+  text-align: center;
+  color: $dark-grey-color;
+}
+
+
+@mixin level-number-grey {
+  text-align: center;
+  font-weight: bold;
+  color: $dark-grey-color;
+}
+
+@mixin level-word-white {
+  margin: 0 auto;
+  border-top: 1px solid $white-color;
+  padding-top: 5px;
+  text-align: center;
+  color: $white-color;
+}
+
+
+//СПИСОК СТРАН И КОНТИНЕНТОВ.
+@mixin litters-list {
+  border-collapse: collapse;
+}
+
+@mixin filter-item--active {
+  color: $blue-color-word;
+}
+
+@mixin filter-item {
+  color: $dark-grey-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 14px;
+
+  &--active {
+    @include filter-item--active;
+  }
+
+  svg {
+    color: $dark-grey-color;
+  }
+}
+
+@mixin leters-item {
+  width: 19%;
+  border: 1px solid $light-grey-color;
+}
+
+@mixin leters-item-button {
+  @include button;
+  display: block;
+  width: 100%;
+  height: 40px;
+  color: $blue-color;
+  background-color: $white-color;
+  font-weight: bold;
+  border: none;
+
+  &--active {
+    color: $white-color;
+    background-color: #172a5b;
+  }
+}
+
+@mixin blue-button {
+  @include flex-row;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 13px 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: #d7dbee;
+  border: none;
+  text-align: center;
+  border-radius: 20px;
+
+  @media (min-width: $min-tablet-width) {
+    font-size: 20px;
+  }
+}
+
+@mixin blue-button-with-svg {
+  text-transform: uppercase;
+  background-color: #d7dbee;
+  border: none;
+  border-radius: 50%;
+
+  svg {
+    @include center-absolute-element;
+  }
+}
+
+@mixin account-lists {
+  width: 100%;
+  border: $grey-border;
+  border-radius: 10px;
+}
+
+@mixin account-list-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: $blue-color;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  margin-top: -9px;
+  background-color: $light-blue-color;
+}
+
+@mixin background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin blue-color-button {
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+  line-height: 25px;
+  position: relative;
+  color: $blue-color;
+  cursor: pointer;
+  outline: none;
+
+  @media (min-width: $min-tablet-width) {
+    font-size: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $light-blue-color;
+  }
+
+  &:active {
+    color: $dark-blue-color;
+  }
+}
+
+@mixin blue-button-with-icon {
+  position: relative;
+  display: block;
+  width: 65px;
+  height: 70px;
+  background-color: $dark-light-blue-color;
+  border-radius: 50%;
+
+  svg {
+    @include center-absolute-element;
   }
 }
 
@@ -170,28 +994,6 @@
   font-size: 41px;
   color: $black-color;
   line-height: 48px;
-}
-
-@mixin section-header {
-  font-size: 18px;
-  line-height: 26px;
-  color: $black-color;
-
-  @media (max-width: $tablet-width) {
-    font-size: 14px;
-    line-height: 20px;
-  }
-}
-
-@mixin section-text {
-  font-size: 16px;
-  line-height: 24px;
-  color: $black-color;
-
-  @media (max-width: $tablet-width) {
-    font-size: 14px;
-    line-height: 20px;
-  }
 }
 
 @mixin white-border-button {
@@ -248,4 +1050,46 @@
 
 @mixin icon-star {
   margin-right: 5px;
+}
+
+@mixin line-near-header {
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 1px;
+    background-color: $dark-grey-color;
+    position: relative;
+  }
+}
+
+@mixin line-near-header-before {
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 1px;
+    background-color: $very-dark-grey-color;
+    position: relative;
+    margin-left: -100%;
+    left: -14px;
+    border-radius: 10px;
+  }
+}
+
+@mixin line-near-header-after {
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 1px;
+    background-color: $very-dark-grey-color;
+    position: relative;
+    margin-right: -100%;
+    right: -14px;
+  }
 }

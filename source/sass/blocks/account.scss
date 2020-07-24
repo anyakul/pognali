@@ -1,0 +1,239 @@
+.account {
+  padding-top: 23px;
+  margin-bottom: 22px;
+
+  @media (min-width: $min-tablet-width) {
+    padding-top: 65px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.account__wrapper {
+  @include inner-page-width;
+  @include flex-row-wrap;
+  justify-content: space-between;
+
+  @media (min-width: $min-tablet-width) {
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 92%;
+  }
+}
+
+.account__wrapper picture {
+  @media (min-width: $min-tablet-width) {
+    order: 3;
+  }
+}
+
+.account__level {
+  @include people-level;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 18px;
+
+  @media (min-width: $min-tablet-width) {
+    margin-left: 0;
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.account__level-number {
+  @include level-number-grey;
+  margin-top: 15px;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 2px;
+
+  @media (min-width: $min-tablet-width) {
+    margin-top: 15px;
+  }
+}
+
+.account__level-word {
+  @include level-word-grey;
+  width: 45px;
+}
+
+.account__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 18px;
+
+  @media (min-width: $min-tablet-width) {
+    margin-right: 0;
+    height: 94px;
+    width: 96px;
+    border-radius: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.account__button-item {
+  width: 100%;
+  margin-bottom: 35px;
+
+  @media (min-width: $min-tablet-width) {
+    order: 4;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.account__button {
+  @include blue-button;
+  width: 100%;
+  padding: 10px;
+
+  @media (min-width: $min-tablet-width) {
+    padding: 20px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    width: 193px;
+    margin-left: auto;
+    margin-right: 93px;
+    padding: 13px 5px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.account__button-span {
+  margin-right: 5px;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.account__hashtags {
+  @include account-lists;
+  margin-bottom: 27px;
+
+  @media (min-width: $min-tablet-width) {
+    @include flex-column;
+    order: 5;
+    padding-top: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+    margin-left: 62px;
+    width: 55%;
+  }
+}
+
+.account__hashtags textarea {
+  resize: none;
+  width: 82%;
+  margin: 0 auto;
+  padding: 0 9%;
+  line-height: 17px;
+  font-size: 13px;
+  padding-bottom: 10px;
+  height: 47px;
+  border: none;
+  background-color: transparent;
+  color: $grey-color-word;
+
+  @media (min-width: $min-tablet-width) {
+    height: 22px;
+  }
+}
+
+.account__hashtags-header {
+  @include account-list-header;
+  width: 40px;
+
+  @media (min-width: $min-tablet-width) {
+    order: 2;
+    font-size: 19px;
+    width: 65px;
+    margin-top: 14px;
+    margin-bottom: -10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 20px;
+  }
+}
+
+
+.account__transport {
+  @include account-lists;
+  margin-bottom: 12px;
+
+  @media (min-width: $min-tablet-width) {
+    @include flex-column;
+    padding-top: 20px;
+    width: 49%;
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 3;
+    width: 29%;
+  }
+}
+
+.account__transport-header {
+  @include account-list-header;
+  margin-bottom: 8px;
+  width: 90px;
+  font-size: 14px;
+
+  @media (min-width: $min-tablet-width) {
+    order: 2;
+    font-size: 19px;
+    width: 120px;
+    margin-top: 14px;
+    margin-bottom: -10px;
+  }
+}
+
+.account__transport-list {
+  @include cancel-list;
+  @include flex-row-wrap;
+  @include content-width;
+  margin-bottom: 12px;
+  justify-content: center;
+
+  @media (min-width: $min-tablet-width) {
+    order: 1;
+    margin-bottom: 0;
+  }
+}
+
+.account__transport-item {
+  @include item-transport;
+
+  @media (min-width: $min-tablet-width) {
+    width: 43px;
+    height: 45px;
+  }
+}

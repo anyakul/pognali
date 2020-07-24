@@ -1,140 +1,121 @@
 .page-header {
-  padding-bottom: 50px;
-  background-color: $bg-dark-blue-color;
-}
+  @include header-promo-bg-color;
+  padding-top: 26px;
 
-.page-header--catalog {
-  background-color: $bg-tablet-dark-blue-color;
+  &--inner-page {
+    padding-top: 20px;
+  }
+
+  @media (min-width: $min-tablet-width) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+  }
 }
 
 .page-header__wrapper {
   @include page-width;
   @include flex-row-space;
   align-items: center;
-  width: 84%;
-  padding-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
+}
+
+.page-header__logo {
+  @include logo;
+
+  @media (min-width: $min-tablet-width) {
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    height: 50px;
+    margin-right: 40px;
+  }
+}
+
+.page-header__main-nav {
+  .page-header__menu {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      position: static;
+      background-color: inherit;
+    }
+  }
+
+  &--opened {
+    @include popup-all-width;
+
+    .page-header__menu {
+      display: block;
+    }
+
+    .page-header__toggle {
+      position: absolute;
+      right: 23px;
+      top: 23px;
+      height: 22px;
+      background-image: url("../img/close.svg");
+      background-repeat: no-repeat;
+
+      @media (min-width: $min-tablet-width) {
+        @include center-absolute-element-x;
+        top: 50px;
+      }
+    }
+  }
 }
 
 .page-header__toggle {
-  margin-top: 4px;
-}
+  @include button;
+  width: 25px;
+  height: 11px;
+  background-image: url("../img/menu.svg");
+  background-repeat: no-repeat;
 
-@media (min-width: $min-tablet-width) {
-  .page-header {
-    padding-bottom: 65px;
-    padding-top: 42px;
-    background-color: $bg-tablet-dark-blue-color;
+  @media (min-width: $min-tablet-width) {
+    margin-left: 20px;
   }
 
-  .page-header--catalog {
-    padding-bottom: 140px;
-  }
-
-  .page-header__wrapper {
-    width: 89%;
-    padding-top: 0;
-  }
-
-  .page-header__toggle {
-    @include button;
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: $max-tablet-width) {
-  .page-header__main-nav--closed .page-header__menu,
-  .page-header__contacts {
+  @media (min-width: $desktop-width) {
     display: none;
   }
+}
 
-  .page-header__logo-menu {
-    @include flex-row-space;
-    width: 50%;
+.page-header__contacts {
+  @include contacts-list;
+
+  @media (max-width: $mobile-width) {
+    @include visually-hidden;
   }
 
-  .page-header__logo-image {
-    width: 164px;
-    height: 45px;
-  }
-
-  .page-header__toggle {
-    @include button;
-  }
-
-  .page-header__main-nav--opened {
-    @include page-width;
-    display: flex;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    background-color: $white-color;
-    width: 100%;
-    left: 0;
-  }
-
-  .page-header__main-nav--opened .page-header__toggle {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    width: 25px;
-    height: 20px;
-    background-image: url("../img/close.svg");
-    background-repeat: no-repeat;
-  }
-
-  .page-header__main-nav--closed .page-header__toggle {
-    display: block;
-    background-image: url("../img/menu.svg");
-    width: 25px;
-    height: 20px;
-    background-repeat: no-repeat;
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
   }
 }
 
-@media (max-width: $mobile-width) {
-  .page-header__logo-menu {
-    width: 100%;
-  }
+.page-header__contacts-item {
+  @include contacts-item;
+  width: 50px;
+  height: 50px;
 
-  .page-header__logo-image {
-    width: 100px;
-    height: 20px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-header {
-    padding-bottom: 0;
-    padding-top: 0;
-    background-color: $bg-desktop-dark-blue-color;
-  }
-
-  .page-header--catalog {
-    background-color: $bg-tablet-dark-blue-color;
-  }
-
-  .page-header__wrapper {
-    @include flex-row;
-    width: 94%;
-    padding-top: 43px;
-    align-items: center;
-  }
-
-  .page-header__logo-menu {
-    @include flex-row;
-    align-items: center;
-  }
-
-  .page-header__logo {
-    margin-right: 40px;
-  }
-
-  .page-header__logo-image {
-    width: 200px;
-    height: 50px;
-  }
-
-  .page-header__toggle {
+  &--phone,
+  &--email {
     display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  &--login {
+    min-width: 185px;
   }
 }

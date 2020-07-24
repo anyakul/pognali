@@ -1,145 +1,103 @@
 .address {
+  @include section-above-and-under-another;
   @include section-border-radius;
   background-color: $yellow-color;
   position: relative;
-  z-index: 5;
+  z-index: 65;
+  padding-top: 63px;
+  padding-bottom: 35px;
+
+  @media (min-width: $min-tablet-width) {
+    padding-top: 98px;
+    padding-bottom: 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 55px;
+    padding-top: 105px;
+  }
 }
 
 .address__wrapper {
   @include page-width;
   width: 85%;
-  padding: 33px 0;
+
+  @media (min-width: $desktop-width) {
+    @include flex-row-space;
+    align-items: center;
+    width: 81%;
+  }
 }
 
 .address__text {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 22px;
-  width: 72%;
   text-transform: uppercase;
+
+  @media (min-width: $min-tablet-width) {
+    font-size: 24px;
+    letter-spacing: 0.1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 82%;
+    line-height: 30px;
+  }
 }
 
 .address__item {
   @include flex-row;
   align-items: center;
   margin-bottom: 31px;
+
+  @media (min-width: $min-tablet-width) {
+    width: 90%;
+    margin-bottom: 45px;
+    padding-left: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-right: 0;
+    padding-left: 145px;
+  }
 }
 
-
-.address__item svg {
-  @include yellow-button;
-  width: 12px;
-  height: 22px;
+.address__item-icon {
+  @include black-contacts-circle-with-svg;
+  width: 55px;
   margin-right: 17px;
-  color: $yellow-color;
-  background-color: $black-color;
-  border-radius: 50%;
-  padding: 12px 17px;
+
+  svg {
+    width: 12px;
+
+    @media (min-width: $min-tablet-width) {
+      width: 21px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 28px;
+    }
+  }
+
+  @media (min-width: $min-tablet-width) {
+    margin-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 35px;
+  }
 }
 
 .address__button {
-  @include yellow-button;
-  border: 3px solid #1d2e5b;
-  color: #1d2e5b;
-  padding: 18px 21px;
-  border-radius: 10px;
-  font-size: 17px;
-}
+  @include yellow-button-with-border;
 
-@media (min-width: $min-tablet-width) {
-  .address {
-    background-color: $yellow-color;
-    border-radius: 0 0 60px 60px;
-    position: relative;
-    z-index: 5;
-    padding-top: 50px;
-    padding-bottom: 85px;
+  @media (min-width: $min-tablet-width) {
+    margin-left: 33px;
+    border-radius: 20px;
   }
 
-  .address__wrapper {
-    align-items: center;
-    padding: 0;
-    width: 80%;
-  }
-
-  .address__text {
-    font-size: 24px;
-    width: 72%;
-  }
-
-  .address__item {
-    @include flex-row;
-    align-items: center;
-    margin-bottom: 45px;
-  }
-
-  .address__item svg {
-    @include yellow-button;
-    width: 20px;
-    height: 25px;
-    margin-right: 25px;
-    color: $yellow-color;
-    background-color: $black-color;
-    border-radius: 50%;
-    padding: 19px 23px;
-  }
-
-  .address__button {
-    @include yellow-button;
-    border: 3px solid #1d2e5b;
-    color: #1d2e5b;
-    padding: 26px 31px;
-    border-radius: 17px;
-    font-size: 21px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .address {
-    padding-bottom: 55px;
-  }
-
-  .address__wrapper {
-    @include flex-row;
-    align-items: center;
-    padding: 0;
-    width: 80%;
-  }
-
-  .address__text {
-    font-size: 28px;
-    width: 82%;
-    line-height: 30px;
-  }
-
-  .address__item {
-    @include flex-row;
-    align-items: center;
-    margin-bottom: 0;
-    margin-right: 8%;
-  }
-
-  .address__item svg {
-    @include yellow-button;
-    width: 45px;
-    height: 53px;
-    margin-right: 20px;
-    color: $yellow-color;
-    background-color: $black-color;
-    border-radius: 50%;
-    padding: 19px 23px;
-    margin-left: 10px;
-  }
-
-  .address__button {
-    @include yellow-button;
-    border: 3px solid #1d2e5b;
-    color: #1d2e5b;
-    padding: 26px 34px;
-    border-radius: 28px;
-    font-size: 21px;
-  }
-
-  .address__button svg {
-    margin-left: 20px;
+  @media (min-width: $desktop-width) {
+    width: 43%;
   }
 }

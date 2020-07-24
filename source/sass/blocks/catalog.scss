@@ -1,13 +1,11 @@
 .catalog {
-  width: 85%;
-  margin: 0 auto;
+  @include page-width;
   margin-bottom: 50px;
 }
 
 @media (min-width: $desktop-width) {
   .catalog {
     @include flex-row-space;
-    @include page-width;
     align-items: flex-start;
   }
 

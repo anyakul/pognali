@@ -1,193 +1,108 @@
 .page-footer {
-  border-radius: 20px 20px 0 0;
-  margin-top: -27px;
-  z-index: 30;
+  @include section-border-radius-form-page;
+  margin-top: -90px;
+  z-index: 65;
   position: relative;
   background-color: $white-color;
-  padding-top: 35px;
+  padding-top: 38px;
   padding-bottom: 30px;
-}
 
-.page-footer__logo {
-  margin-bottom: 37px;
-}
+  @media (min-width: $min-tablet-width) {
+    padding-top: 45px;
+  }
 
-.page-footer__logo img {
-  width: 100px;
-}
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
 
-.page-footer__social-link {
-  margin-right: 0;
-  border-radius: 50%;
-  background-color: $yellow-color;
-  padding: 12px;
+  &--form {
+    margin-top: -72px;
+
+    @media (min-width: $desktop-width) {
+      margin-top: -85px;
+    }
+  }
+
+  &--inner-page {
+    margin-top: -60px;
+
+    @media (min-width: $min-tablet-width) {
+      margin-top: -46px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: -75px;
+    }
+  }
 }
 
 .page-footer__wrapper {
   @include page-width;
   @include flex-column;
-  text-align: center;
   margin-bottom: 0;
+
+  @media (min-width: $min-tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-.page-footer__social-link svg,
-.page-footer__made-by svg {
-  color: $black-color;
-}
+.page-footer__logo {
+  @include logo;
+  margin: 0 auto;
+  margin-bottom: 35px;
 
-.page-footer__social-link svg {
-  color: $black-color;
-  position: relative;
-  top: 5px;
+  @media (min-width: $min-tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-footer__social-list {
   @include flex-row;
   @include cancel-list;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 35px;
+
+  @media (min-width: $min-tablet-width) {
+    margin: 0;
+    margin-left: -14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -50px;
+  }
 }
 
 .page-footer__social-item {
-  &:last-child {
-    margin-right: 0;
-  }
+  @include yellow-circle;
 }
 
 .page-footer__made-by {
   @include flex-row-space;
-  @include page-width;
-  text-align: center;
-  color: $black-color;
-  text-decoration: none;
-  border-top: 1px solid $light-grey-color;
+  align-items: center;
   padding-top: 12px;
   font-size: 14px;
-  margin-bottom: 30px;
-  width: 90%;
-  align-items: center;
-}
+  text-decoration: none;
+  color: $black-color;
+  border-top: 1px solid $light-grey-color;
 
-@media (min-width: $min-tablet-width) {
-  .page-footer {
-    border-radius: 50px 50px 0 0;
-    margin-top: -35px;
-    padding-top: 55px;
-  }
-
-  .page-footer__logo {
-    margin-bottom: 0;
-    width: 175px;
-  }
-
-  .page-footer__logo img {
-    width: 175px;
-    height: 45px;
-  }
-
-  .page-footer__wrapper {
-    @include page-width;
-    @include flex-row-space;
-    width: 89%;
-    align-items: center;
-  }
-
-  .page-footer__social-link svg,
-  .page-footer__made-by svg {
+  img {
     color: $black-color;
-  }
 
-  .page-footer__social-list {
-    @include flex-row;
-    @include cancel-list;
-    margin: 0;
-  }
-
-  .page-footer__social-link {
-    padding: 20px 15px;
-  }
-
-  .page-footer__social-item {
-    margin-right: 0;
-
-    &:last-child {
-      margin-right: 0;
+    @media (min-width: $min-tablet-width) {
+      margin-left: 23px;
     }
   }
 
-  .page-footer__made-by {
-    @include flex-row-space;
-    width: auto;
-    border-top: none;
-    margin: 0;
+  @media (min-width: $min-tablet-width) {
     padding-top: 0;
-    color: $black-color;
-    text-decoration: none;
     font-size: 17px;
+    border-top: none;
   }
 
-  .page-footer__made-by img {
-    margin-left: 23px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page-footer {
-    border-radius: 50px 50px 0 0;
-    margin-top: -35px;
-    padding-top: 55px;
-  }
-
-  .page-footer__logo {
-    margin-bottom: 0;
-    width: 175px;
-  }
-
-  .page-footer__logo img {
-    width: 200px;
-    height: 45px;
-  }
-
-  .page-footer__made-by {
+  @media (min-width: $desktop-width) {
     margin: 0;
-  }
-
-  .page-footer__made-by-icon {
-    margin-left: 22px;
-  }
-
-  .page-footer__wrapper {
-    @include flex-row;
-    padding-bottom: 40px;
-    width: 96%;
-  }
-
-  .page-footer__social-link svg,
-  .page-footer__made-by svg {
-    color: $black-color;
-  }
-
-  .page-footer__social-list {
-    @include flex-row;
-    @include cancel-list;
-    margin: 0;
-  }
-
-  .page-footer__social-item {
-    padding: 0;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  .page-footer__social-link {
-    margin-right: 0;
-    border-radius: 50%;
-  }
-
-  .page-footer__social-link svg {
-    width: 20px;
-    height: 25px;
   }
 }
