@@ -36,6 +36,7 @@
 
 .menu__site-list {
   @include cancel-list;
+  width: 100%;
 
   @media (max-width: $max-tablet-width) {
     margin-top: 65px;
@@ -90,6 +91,7 @@
 .menu__login {
   @include login;
   margin-bottom: 50px;
+  width: 100%;
 
   @media (min-width: $min-tablet-width) {
     order: 2;
@@ -105,10 +107,10 @@
 .menu__contacts-list {
   @include cancel-list;
   margin-bottom: 40px;
+    width: 100%;
 
   @media (min-width: $min-tablet-width) {
     order: 4;
-    width: 100%;
     margin-bottom: 130px;
     padding-left: 8%;
   }

@@ -54,7 +54,8 @@
     @include popup-all-width;
 
     .page-header__menu {
-      display: block;
+      @include flex-row-space;
+      flex-wrap: wrap;
     }
 
     .page-header__toggle {
