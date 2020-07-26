@@ -1,4 +1,4 @@
-/* 'use strict';
+'use strict';
 var filterWrapper = document.querySelector('.filter-by-place');
 var filterButtons = document.querySelectorAll('.filter-by-place__button');
 
@@ -13,4 +13,3 @@ var switchMode = function () {
 for (var filterButton of filterButtons) {
   filterButton.addEventListener('click', switchMode);
 }
-*/
